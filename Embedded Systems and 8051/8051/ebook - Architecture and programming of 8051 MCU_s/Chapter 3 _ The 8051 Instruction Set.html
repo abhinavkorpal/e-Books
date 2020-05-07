@@ -1,0 +1,1981 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<!-- saved from url=(0078)http://www.mikroe.com/eng/chapters/view/66/chapter-3-the-8051-instruction-set/ -->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Chapter 3 : The 8051 Instruction Set - Architecture and Programming of 8051 MCU - mikroElektronika</title>
+
+<meta name="keywords" content="chapter3, instruction, set, architecture, programming, 8051, mikroelektronika">
+<meta name="description" content="Process of writing program for the microcontroller mainly consists of giving instructions (commands) in the specific order in which they should be executed in order to carry out a specific task.">  
+<link rel="shortcut icon" href="http://www.mikroe.com/img/favicon.ico" type="image/x-icon">   
+<link rel="stylesheet" type="text/css" href="./Chapter 3 : The 8051 Instruction Set_files/20110128_main.css"><link rel="stylesheet" type="text/css" href="./Chapter 3 : The 8051 Instruction Set_files/20101014_navigation.css"><link rel="stylesheet" type="text/css" href="./Chapter 3 : The 8051 Instruction Set_files/jquery.lightbox-0.5.css"> 
+<!--[if lte IE 6]>   
+   <link rel="stylesheet" type="text/css" href="/css/ie-6lte-hacks.css" /><![endif]-->  
+<!--[if lt IE 6]>
+   <link rel="stylesheet" type="text/css" href="/css/ie-5-hacks.css" />  
+<![endif]-->
+<script type="text/javascript" src="./Chapter 3 : The 8051 Instruction Set_files/jquery-1.4.2.min.js"></script><script type="text/javascript" src="./Chapter 3 : The 8051 Instruction Set_files/jquery.lightbox-0.5.js"></script><!-- Activate jQuery lightBox plugin -->
+<script type="text/javascript">
+$(function() {
+    $('a.lightbox').lightBox(); // Select all links with lightbox class           
+});
+</script>
+</head>
+<body>         
+  <div id="wrapper">
+ 
+   <div id="header">                  
+    <div id="headerlogo">            
+      <a href="http://www.mikroe.com/eng/home/index/"><img src="./Chapter 3 : The 8051 Instruction Set_files/logo.gif" title="MikroElektronika" alt="MikroElektronika"></a>       
+	</div>
+		    
+	<div id="headermenu">          	         
+                  <div id="headersearch"> 
+            <form id="SearchIndexForm" method="post" action="http://www.mikroe.com/eng/searches/index/" accept-charset="utf-8"><div style="display:none;"><input type="hidden" name="_method" value="POST"></div>   
+            <div class="formFieldSearch">              
+               <label for="SearchKeywords">Search: </label><input name="data[Search][keywords]" type="text" id="SearchKeywords">            </div>
+            <input type="hidden" name="data[Search][sortby]" value="relevance" id="SearchSortby"><input type="hidden" name="data[Search][showing]" value="9" id="SearchShowing"><input type="image" src="./Chapter 3 : The 8051 Instruction Set_files/find.gif" class="submitButtonSearch">            </form>        
+          </div>          
+            
+<!--      <div id="lang_select">    
+        <ul>                                           
+          <li><a href="#">Language Selection ( English )</a>
+          <ul>
+                            <li><a href="/eng/chapters/view/66/">English</a></li>
+                <li><a href="/ser/chapters/view/66/">Srpsko-Hrvatski</a></li>                        
+                      </ul>
+          </li>   
+        </ul>
+      </div> -->
+	  <div class="sep10px"></div>
+	  <div class="fright">
+          	      
+          <!--&nbsp;&nbsp;|&nbsp;&nbsp;
+          <a href="#">Shopping help</a>&nbsp;&nbsp;|&nbsp;&nbsp;-->
+		  Email:
+			<script type="text/javascript">
+			/* <![CDATA[ */
+			function hivelogic_enkoder(){var kode=
+			"kode=\"nrgh@%>,**=,40kwjqho1hgrn+wDudkf1hgrnBkwjqho1hgrn?l+.{@hgrn\\000,l+"+
+			"wDudkf1hgrn.,4.l+wDudkf1hgrn@.{~,5@.l>,40kwjqho1hgrn+?l>3@l+uri>**@{>_%>*,"+
+			"=*4,k0jwhq1oghnrw+uDkd1fghnrkBjwhq1oghnrl?.+@{ghnr,\\000+lDwdufkh1rg.n4,l."+
+			"w+uDkd1fghnr.@~{5,.@>l4,k0jwhq1oghnr?+>l@3+lru>i**{@_%__>{@hgrn\\000,f+hgr"+
+			"FudkFprui1jqluwV@.{>;54@.f,3?f+il>60,l+wDhgrFudkf1hgrn@f~,..l>kwjqho1hgrn?"+
+			"l>3@l+uri>**@{>_%__~k____uC3j3q/3________i.kjuIxgnIsuxl4mtoxzYC1~A>87C1i/6"+
+			"Bi.loA93/o.zGkjuIxgni4kjuqCi\\001/11oAnzmtkr4kjuqBoA6Co.xulA--C~A(D2+Gj8Ev"+
+			"xl7nx{trvInlrooxG+ejtrwx{}tnuNx{trv)}lj}wxL+eFnu}r})+e::4____{~____wr)zjRn"+
+			"un{FwlPs}~nHkx|7vxltnv{nrrIolCo}xrxvuejo+{F)nEq1j}+{n7rw\\000v}lnm~Cxj(qk@"+
+			"u_____%__hgrn@_%__ghnr_%@hgrn%>nrgh@nrgh1vsolw+**,1uhyhuvh+,1mrlq+**,\";x="+
+			"'';for(i=0;i<kode.length;i++){c=kode.charCodeAt(i)-3;if(c<0)c+=128;x+=Stri"+
+			"ng.fromCharCode(c)}kode=x"
+			;var i,c,x;while(eval(kode));}hivelogic_enkoder();
+			/* ]]> */
+			</script><a href="mailto:office@mikroe.com?subject=General%20Inquiry" title="Contact mikroElektronika">office@mikroe.com</a>	
+	  </div>	
+	</div>
+   </div> 
+ 
+    <div id="nav">                                 
+      <ul class="dropdown">
+  
+  <li><a href="http://www.mikroe.com/eng/home/index/">Home</a>      
+  </li>
+  
+  <li><a href="http://www.mikroe.com/eng/categories/view/1/development-tools/">Development Tools</a>           <ul>
+             
+          <li><a href="http://www.mikroe.com/eng/categories/view/6/pic-development-tools/">PIC Development Tools</a></li>          
+             
+          <li><a href="http://www.mikroe.com/eng/categories/view/7/dspic-development-tools/">dsPIC Development Tools</a></li>          
+             
+          <li><a href="http://www.mikroe.com/eng/categories/view/8/pic24-and-dspic33-tools/">PIC24 and dsPIC33 Tools</a></li>          
+             
+          <li><a href="http://www.mikroe.com/eng/categories/view/35/pic32mx-development-tools/">PIC32MX Development Tools</a></li>          
+             
+          <li><a href="http://www.mikroe.com/eng/categories/view/9/avr-development-tools/">AVR Development Tools</a></li>          
+             
+          <li><a href="http://www.mikroe.com/eng/categories/view/14/cypress-psoc/">Cypress PSoC</a></li>          
+             
+          <li><a href="http://www.mikroe.com/eng/categories/view/15/8051-development-tools/">8051 Development Tools</a></li>          
+             
+          <li><a href="http://www.mikroe.com/eng/categories/view/16/arm-development-tools/">ARM Development Tools</a></li>          
+             
+          <li><a href="http://www.mikroe.com/eng/categories/view/19/gsm-gprs-tools/">GSM / GPRS Tools</a></li>          
+             
+          <li><a href="http://www.mikroe.com/eng/categories/view/20/gps-tools/">GPS Tools</a></li>          
+             
+          <li><a href="http://www.mikroe.com/eng/categories/view/43/components/">Components</a></li>          
+             
+          <li><a href="http://www.mikroe.com/eng/categories/view/45/socket-adapters/">Socket Adapters</a></li>          
+             
+          <li><a href="http://www.mikroe.com/eng/categories/view/60/universal-development-tools/">Universal Development Tools</a></li>          
+           </ul>                               
+      
+  </li>
+  
+  <li><a href="http://www.mikroe.com/eng/categories/view/2/compilers/">Compilers</a>           <ul>
+             
+          <li><a href="http://www.mikroe.com/eng/categories/view/10/pic-compilers/">PIC Compilers</a></li>          
+             
+          <li><a href="http://www.mikroe.com/eng/categories/view/21/avr-compilers/">AVR Compilers</a></li>          
+             
+          <li><a href="http://www.mikroe.com/eng/categories/view/22/dspic30-33-and-pic24-compilers/">dsPIC30/33 and PIC24 Compilers</a></li>          
+             
+          <li><a href="http://www.mikroe.com/eng/categories/view/89/pic32-compilers/">PIC32 Compilers</a></li>          
+             
+          <li><a href="http://www.mikroe.com/eng/categories/view/23/8051-compilers/">8051 Compilers</a></li>          
+             
+          <li><a href="http://www.mikroe.com/eng/categories/view/64/additional-software/">Additional Software</a></li>          
+           </ul>                               
+      
+  </li>
+  
+  <li><a href="http://www.mikroe.com/eng/categories/view/11/accessory-boards/">Accessory Boards</a>           <ul>
+             
+          <li><a href="http://www.mikroe.com/eng/categories/view/36/communication-boards/">Communication Boards</a></li>          
+             
+          <li><a href="http://www.mikroe.com/eng/categories/view/37/storage-boards/">Storage Boards</a></li>          
+             
+          <li><a href="http://www.mikroe.com/eng/categories/view/38/time-measuring-boards/">Time Measuring Boards</a></li>          
+             
+          <li><a href="http://www.mikroe.com/eng/categories/view/39/display-boards/">Display Boards</a></li>          
+             
+          <li><a href="http://www.mikroe.com/eng/categories/view/40/measurement-boards/">Measurement Boards</a></li>          
+             
+          <li><a href="http://www.mikroe.com/eng/categories/view/42/audio-voice-boards/">Audio &amp; Voice Boards</a></li>          
+             
+          <li><a href="http://www.mikroe.com/eng/categories/view/44/power-supply-control-boards/">Power Supply Control Boards</a></li>          
+             
+          <li><a href="http://www.mikroe.com/eng/categories/view/41/various-boards/">Various Boards</a></li>          
+           </ul>                               
+      
+  </li>
+  
+  <li><a href="http://www.mikroe.com/eng/categories/view/3/special-offers/">Special Offers</a>           <ul>
+             
+          <li><a href="http://www.mikroe.com/eng/categories/view/24/pic-offers/">PIC Offers</a></li>          
+             
+          <li><a href="http://www.mikroe.com/eng/categories/view/25/dspic30-offers/">dsPIC30 Offers</a></li>          
+             
+          <li><a href="http://www.mikroe.com/eng/categories/view/26/dspic33-and-pic24-offers/">dsPIC33 and PIC24 Offers</a></li>          
+             
+          <li><a href="http://www.mikroe.com/eng/categories/view/27/avr-offers/">AVR Offers</a></li>          
+             
+          <li><a href="http://www.mikroe.com/eng/categories/view/28/8051-offers/">8051 Offers</a></li>          
+           </ul>                               
+      
+  </li>
+  
+  <li><a href="http://www.mikroe.com/eng/products/easybuy/">Easy Buy</a>      
+  </li>
+  
+  <li><a href="http://www.mikroe.com/eng/categories/view/4/publications/">Publications</a>           <ul>
+             
+          <li><a href="http://www.mikroe.com/eng/categories/view/12/pic-books/">PIC Books</a></li>          
+             
+          <li><a href="http://www.mikroe.com/eng/categories/view/29/dspic-books/">dsPIC Books</a></li>          
+             
+          <li><a href="http://www.mikroe.com/eng/categories/view/30/8051-books/">8051 Books</a></li>          
+             
+          <li><a href="http://www.mikroe.com/eng/categories/view/31/various-electronic-books/">Various Electronic Books</a></li>          
+             
+          <li><a href="http://www.mikroe.com/eng/categories/view/32/articles/">Articles</a></li>          
+             
+          <li><a href="http://www.mikroe.com/eng/categories/view/50/other-authors-books/">Other Authors Books</a></li>          
+           </ul>                               
+      
+  </li>
+  
+    <li><a href="http://www.mikroe.com/esupport/">Support</a></li>
+  
+  <li><a href="http://www.mikroe.com/eng/projects/index/">Projects</a>      
+  </li>
+  
+  <li><a href="http://www.mikroe.com/eng/product_downloads/download/">Download</a>      
+  </li>
+ 
+</ul>   </div>
+    <div class="separator"></div>
+        <div id="full">         
+                   
+                
+	    		                              
+    <div id="content_left">  
+    <h1>Architecture and programming of 8051 MCU's</h1>
+    <div id="chapters">
+
+        <ul>
+            <li><a href="http://www.mikroe.com/eng/products/view/267/architecture-and-programming-of-8051-mcu-s/">TOC</a></li>
+                
+                                 <li><a href="http://www.mikroe.com/eng/chapters/view/64/chapter-1-introduction-to-microcontrollers/">Chapter 1</a></li>
+                               
+                                 <li><a href="http://www.mikroe.com/eng/chapters/view/65/chapter-2-8051-microcontroller-architecture/">Chapter 2</a></li>
+                               
+                                                     
+                  <li><a href="./Chapter 3 : The 8051 Instruction Set_files/Chapter 3 : The 8051 Instruction Set.html" class="here">Chapter 3</a></li>
+                               
+                                 <li><a href="http://www.mikroe.com/eng/chapters/view/67/chapter-4-at89s8253-microcontroller/">Chapter 4</a></li>
+                               
+                                 <li><a href="http://www.mikroe.com/eng/chapters/view/68/chapter-5-assembly-language/">Chapter 5</a></li>
+                               
+                                 <li><a href="http://www.mikroe.com/eng/chapters/view/69/chapter-6-examples/">Chapter 6</a></li>
+                               
+                                 <li><a href="http://www.mikroe.com/eng/chapters/view/70/chapter-7-development-systems/">Chapter 7</a></li>
+                                                               
+        </ul>
+    </div>      
+    <div class="separator"></div>
+    <h2>Chapter 3 : The 8051 Instruction Set</h2>
+<div class="toc">
+<ul>
+<li><a href="http://www.mikroe.com/eng/chapters/view/66/chapter-3-the-8051-instruction-set/#ch3.1">3.1 Types of instructions</a></li>
+<li><a href="http://www.mikroe.com/eng/chapters/view/66/chapter-3-the-8051-instruction-set/#ch3.2">3.2 Description of the 8051 instructions</a></li>
+</ul>
+</div>
+<h3>Introduction</h3>
+<p>The process of writing program for the microcontroller mainly consists of giving instructions (commands) in the specific order in which they should be executed in order to carry out a specific task. As electronics cannot “understand” what for example an instruction “if the push button is pressed- turn the light on” means, then a certain number of simpler and precisely defined orders that decoder can recognise must be used. All commands are known as INSTRUCTION SET. All microcontrollers compatibile with the 8051 have in total of 255 instructions, i.e. 255 different words available for program writing.</p>
+<p>At first sight, it is imposing number of odd signs that must be known by heart. However, It is not so complicated as it looks like. Many instructions are considered to be “different”, even though they perform the same operation, so there are only 111 truly different commands.  For example: ADD A,R0, ADD A,R1, ... ADD A,R7 are instructions that perform the same operation  (additon of the accumulator and register). Since there are 8 such registers, each instruction is counted separately. Taking into account that all instructions perform only 53 operations (addition, subtraction, copy etc.) and most of them are rarely used in practice, there are actually 20-30 abbreviations to be learned, which is acceptable.</p>
+<h3 id="ch3.1">3.1 Types of instructions</h3>
+<p>Depending on operation they perform, all instructions are divided in several groups:</p>
+<ul class="default_font flat">
+<li>Arithmetic Instructions</li>
+<li>Branch Instructions</li>
+<li>Data Transfer Instructions</li>
+<li>Logic Instructions</li>
+<li>Bit-oriented Instructions</li>
+</ul>
+<p>The first part of each instruction, called MNEMONIC refers to the operation an instruction performs (copy, addition, logic operation etc.). Mnemonics are abbreviations of the name of operation being executed. For example:</p>
+<ul class="default_font flat">
+<li><code>INC R1</code> - Means: Increment register R1 (increment register R1);</li>
+<li><code>LJMP LAB5</code> - Means: Long Jump LAB5 (long jump to the address marked as LAB5);</li>
+<li><code>JNZ LOOP</code> - Means: Jump if Not Zero LOOP (if the number in the accumulator is not 0, jump to the address marked as LOOP);</li>
+</ul>
+<p>The other part of instruction, called OPERAND is separated from mnemonic by at least one whitespace and defines data being processed by instructions. Some of the instructions have no operand, while some of them have one, two or three. If there is more than one operand in an instruction, they are separated by a comma. For example:</p>
+<ul class="default_font flat">
+<li><code>RET</code> - return from a subroutine;</li>
+<li><code>JZ TEMP</code> - if the number in the accumulator is not 0, jump to the address marked as TEMP;</li>
+<li><code>ADD A,R3</code> - add R3 and accumulator;</li>
+<li><code>CJNE A,#20,LOOP</code> - compare accumulator with 20. If they are not equal, jump to the address marked as LOOP;</li>
+</ul>
+
+<h4>Arithmetic instructions</h4>
+
+<p>Arithmetic instructions perform several basic operations such as addition, subtraction, division,     multiplication etc. After execution, the result is stored in the first operand. For example:</p>
+<p><code>ADD A,R1</code> - The result of addition (A+R1) will be stored in the accumulator.</p>
+<table class="def_table">
+<tbody>
+<tr>
+<th colspan="4"><b>Arithmetic Instructions</b></th>
+</tr>
+<tr>
+<td><b>Mnemonic</b></td>
+<td><b>Description</b></td>
+<td><b>Byte</b></td>
+<td><b>Cycle</b></td>
+</tr>
+<tr>
+<td>ADD A,Rn</td>
+<td>Adds the register to the accumulator</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>ADD A,direct</td>
+<td>Adds the direct byte to the accumulator</td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr>
+<td>ADD A,@Ri</td>
+<td>Adds the indirect RAM to the accumulator</td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>ADD A,#data</td>
+<td>Adds the immediate data to the accumulator</td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr>
+<td>ADDC A,Rn</td>
+<td>Adds the register to the accumulator with a carry flag</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>ADDC A,direct</td>
+<td>Adds the direct byte to the accumulator with a carry flag</td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr>
+<td>ADDC A,@Ri</td>
+<td>Adds the indirect RAM to the accumulator with a carry flag</td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>ADDC A,#data</td>
+<td>Adds the immediate data to the accumulator with a carry flag</td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr>
+<td>SUBB A,Rn</td>
+<td>Subtracts the register from the accumulator with a borrow</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>SUBB A,direct</td>
+<td>Subtracts the direct byte from the accumulator with a borrow</td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr>
+<td>SUBB A,@Ri</td>
+<td>Subtracts the indirect RAM from the accumulator with a borrow</td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>SUBB A,#data</td>
+<td>Subtracts the immediate data from the accumulator with a borrow</td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr>
+<td>INC A</td>
+<td>Increments the accumulator by 1</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>INC Rn</td>
+<td>Increments the register by 1</td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>INC Rx</td>
+<td>Increments the direct byte by 1</td>
+<td>2</td>
+<td>3</td>
+</tr>
+<tr>
+<td>INC @Ri</td>
+<td>Increments the indirect RAM by 1</td>
+<td>1</td>
+<td>3</td>
+</tr>
+<tr>
+<td>DEC A</td>
+<td>Decrements the accumulator by 1</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>DEC Rn</td>
+<td>Decrements the register by 1</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>DEC Rx</td>
+<td>Decrements the direct byte by 1</td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DEC @Ri</td>
+<td>Decrements the indirect RAM by 1</td>
+<td>2</td>
+<td>3</td>
+</tr>
+<tr>
+<td>INC DPTR</td>
+<td>Increments the Data Pointer by 1</td>
+<td>1</td>
+<td>3</td>
+</tr>
+<tr>
+<td>MUL AB</td>
+<td>Multiplies A and B</td>
+<td>1</td>
+<td>5</td>
+</tr>
+<tr>
+<td>DIV AB</td>
+<td>Divides A by B</td>
+<td>1</td>
+<td>5</td>
+</tr>
+<tr>
+<td>DA A</td>
+<td>Decimal adjustment of the accumulator according to BCD code</td>
+<td>1</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+
+<h4>Branch Instructions</h4>
+
+<p>There are two kinds of branch instructions:</p>
+<p>Unconditional jump instructions: upon their execution a jump to a new location from    where the program continues execution is executed.</p>
+<p>Conditional jump instructions: a jump to a new program location is executed only if a specified condition is met. Otherwise,    the program normally proceeds with the next instruction.</p>
+<table class="def_table">
+<tbody>
+<tr>
+<th colspan="4"><b>Branch Instructions</b></th>
+</tr>
+<tr>
+<td><b>Mnemonic</b></td>
+<td><b>Description</b></td>
+<td><b>Byte</b></td>
+<td><b>Cycle</b></td>
+</tr>
+<tr>
+<td>ACALL addr11</td>
+<td>Absolute subroutine call</td>
+<td>2</td>
+<td>6</td>
+</tr>
+<tr>
+<td>LCALL addr16</td>
+<td>Long subroutine call</td>
+<td>3</td>
+<td>6</td>
+</tr>
+<tr>
+<td>RET</td>
+<td>Returns from subroutine</td>
+<td>1</td>
+<td>4</td>
+</tr>
+<tr>
+<td>RETI</td>
+<td>Returns from interrupt subroutine</td>
+<td>1</td>
+<td>4</td>
+</tr>
+<tr>
+<td>AJMP addr11</td>
+<td>Absolute jump</td>
+<td>2</td>
+<td>3</td>
+</tr>
+<tr>
+<td>LJMP addr16</td>
+<td>Long jump</td>
+<td>3</td>
+<td>4</td>
+</tr>
+<tr>
+<td>SJMP rel</td>
+<td>Short jump (from –128 to +127 locations relative to the following instruction)</td>
+<td>2</td>
+<td>3</td>
+</tr>
+<tr>
+<td>JC rel</td>
+<td>Jump if carry flag is set. Short jump.</td>
+<td>2</td>
+<td>3</td>
+</tr>
+<tr>
+<td>JNC rel</td>
+<td>Jump if carry flag is not set. Short jump.</td>
+<td>2</td>
+<td>3</td>
+</tr>
+<tr>
+<td>JB bit,rel</td>
+<td>Jump if direct bit is set. Short jump.</td>
+<td>3</td>
+<td>4</td>
+</tr>
+<tr>
+<td>JBC bit,rel</td>
+<td>Jump if direct bit is set and clears bit. Short jump.</td>
+<td>3</td>
+<td>4</td>
+</tr>
+<tr>
+<td>JMP @A+DPTR</td>
+<td>Jump indirect relative to the DPTR</td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>JZ rel</td>
+<td>Jump if the accumulator is zero. Short jump.</td>
+<td>2</td>
+<td>3</td>
+</tr>
+<tr>
+<td>JNZ rel</td>
+<td>Jump if the accumulator is not zero. Short jump.</td>
+<td>2</td>
+<td>3</td>
+</tr>
+<tr>
+<td>CJNE A,direct,rel</td>
+<td>Compares direct byte to the accumulator and jumps if not equal. Short jump.</td>
+<td>3</td>
+<td>4</td>
+</tr>
+<tr>
+<td>CJNE A,#data,rel</td>
+<td>Compares immediate data to the accumulator and jumps if not equal. Short jump.</td>
+<td>3</td>
+<td>4</td>
+</tr>
+<tr>
+<td>CJNE Rn,#data,rel</td>
+<td>Compares immediate data to the register and jumps if not equal. Short jump.</td>
+<td>3</td>
+<td>4</td>
+</tr>
+<tr>
+<td>CJNE @Ri,#data,rel</td>
+<td>Compares immediate data to indirect register and jumps if not equal. Short jump.</td>
+<td>3</td>
+<td>4</td>
+</tr>
+<tr>
+<td>DJNZ Rn,rel</td>
+<td>Decrements register and jumps if not 0. Short jump.</td>
+<td>2</td>
+<td>3</td>
+</tr>
+<tr>
+<td>DJNZ Rx,rel</td>
+<td>Decrements direct byte and jump if not 0. Short jump.</td>
+<td>3</td>
+<td>4</td>
+</tr>
+<tr>
+<td>NOP</td>
+<td>No operation</td>
+<td>1</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+
+<h4>Data Transfer Instructions</h4>
+
+<p>Data transfer instructions move the content of one register to another. The register the    content of which is moved remains unchanged. If they have the suffix “X” (MOVX), the data is    exchanged with external memory.</p>
+<table class="def_table">
+<tbody>
+<tr>
+<th colspan="4"><b>Data Transfer Instructions</b></th>
+</tr>
+<tr>
+<td><b>Mnemonic</b></td>
+<td><b>Description</b></td>
+<td><b>Byte</b></td>
+<td><b>Cycle</b></td>
+</tr>
+<tr>
+<td>MOV A,Rn</td>
+<td>Moves the register to the accumulator</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>MOV A,direct</td>
+<td>Moves the direct byte to the accumulator</td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr>
+<td>MOV A,@Ri</td>
+<td>Moves the indirect RAM to the accumulator</td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>MOV A,#data</td>
+<td>Moves the immediate data to the accumulator</td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr>
+<td>MOV Rn,A</td>
+<td>Moves the accumulator to the register</td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>MOV Rn,direct</td>
+<td>Moves the direct byte to the register</td>
+<td>2</td>
+<td>4</td>
+</tr>
+<tr>
+<td>MOV Rn,#data</td>
+<td>Moves the immediate data to the register</td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr>
+<td>MOV direct,A</td>
+<td>Moves the accumulator to the direct byte</td>
+<td>2</td>
+<td>3</td>
+</tr>
+<tr>
+<td>MOV direct,Rn</td>
+<td>Moves the register to the direct byte</td>
+<td>2</td>
+<td>3</td>
+</tr>
+<tr>
+<td>MOV direct,direct</td>
+<td>Moves the direct byte to the direct byte</td>
+<td>3</td>
+<td>4</td>
+</tr>
+<tr>
+<td>MOV direct,@Ri</td>
+<td>Moves the indirect RAM to the direct byte</td>
+<td>2</td>
+<td>4</td>
+</tr>
+<tr>
+<td>MOV direct,#data</td>
+<td>Moves the immediate data to the direct byte</td>
+<td>3</td>
+<td>3</td>
+</tr>
+<tr>
+<td>MOV @Ri,A</td>
+<td>Moves the accumulator to the indirect RAM</td>
+<td>1</td>
+<td>3</td>
+</tr>
+<tr>
+<td>MOV @Ri,direct</td>
+<td>Moves the direct byte to the indirect RAM</td>
+<td>2</td>
+<td>5</td>
+</tr>
+<tr>
+<td>MOV @Ri,#data</td>
+<td>Moves the immediate data to the indirect RAM</td>
+<td>2</td>
+<td>3</td>
+</tr>
+<tr>
+<td>MOV DPTR,#data</td>
+<td>Moves a 16-bit data to the data pointer</td>
+<td>3</td>
+<td>3</td>
+</tr>
+<tr>
+<td>MOVC A,@A+DPTR</td>
+<td>Moves the code byte relative to the DPTR to the accumulator (address=A+DPTR)</td>
+<td>1</td>
+<td>3</td>
+</tr>
+<tr>
+<td>MOVC A,@A+PC</td>
+<td>Moves the code byte relative to the PC to the accumulator (address=A+PC)</td>
+<td>1</td>
+<td>3</td>
+</tr>
+<tr>
+<td>MOVX A,@Ri</td>
+<td>Moves the external RAM (8-bit address) to the accumulator</td>
+<td>1</td>
+<td>3-10</td>
+</tr>
+<tr>
+<td>MOVX A,@DPTR</td>
+<td>Moves the external RAM (16-bit address) to the accumulator</td>
+<td>1</td>
+<td>3-10</td>
+</tr>
+<tr>
+<td>MOVX @Ri,A</td>
+<td>Moves the accumulator to the external RAM (8-bit address)</td>
+<td>1</td>
+<td>4-11</td>
+</tr>
+<tr>
+<td>MOVX @DPTR,A</td>
+<td>Moves the accumulator to the external RAM (16-bit address)</td>
+<td>1</td>
+<td>4-11</td>
+</tr>
+<tr>
+<td>PUSH direct</td>
+<td>Pushes the direct byte onto the stack</td>
+<td>2</td>
+<td>4</td>
+</tr>
+<tr>
+<td>POP direct</td>
+<td>Pops the direct byte from the stack/td&gt;</td>
+<td>2</td>
+<td>3</td>
+</tr>
+<tr>
+<td>XCH A,Rn</td>
+<td>Exchanges the register with the accumulator</td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>XCH A,direct</td>
+<td>Exchanges the direct byte with the accumulator</td>
+<td>2</td>
+<td>3</td>
+</tr>
+<tr>
+<td>XCH A,@Ri</td>
+<td>Exchanges the indirect RAM with the accumulator</td>
+<td>1</td>
+<td>3</td>
+</tr>
+<tr>
+<td>XCHD A,@Ri</td>
+<td>Exchanges the low-order nibble indirect RAM with the accumulator</td>
+<td>1</td>
+<td>3</td>
+</tr>
+</tbody>
+</table>
+<h4>Logic Instructions</h4>
+<p>Logic instructions perform logic operations upon corresponding bits of two registers.    After execution, the result is stored in the first operand.</p>
+<table class="def_table">
+<tbody>
+<tr>
+<th colspan="4"><b>Logic Instructions</b></th>
+</tr>
+<tr>
+<td><b>Mnemonic</b></td>
+<td><b>Description</b></td>
+<td><b>Byte</b></td>
+<td><b>Cycle</b></td>
+</tr>
+<tr>
+<td>ANL A,Rn</td>
+<td>AND register to accumulator</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>ANL A,direct</td>
+<td>AND direct byte to accumulator</td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr>
+<td>ANL A,@Ri</td>
+<td>AND indirect RAM to accumulator</td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>ANL A,#data</td>
+<td>AND immediate data to accumulator</td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr>
+<td>ANL direct,A</td>
+<td>AND accumulator to direct byte</td>
+<td>2</td>
+<td>3</td>
+</tr>
+<tr>
+<td>ANL direct,#data</td>
+<td>AND immediae data to direct register</td>
+<td>3</td>
+<td>4</td>
+</tr>
+<tr>
+<td>ORL A,Rn</td>
+<td>OR register to accumulator</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>ORL A,direct</td>
+<td>OR direct byte to accumulator</td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr>
+<td>ORL A,@Ri</td>
+<td>OR indirect RAM to accumulator</td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>ORL direct,A</td>
+<td>OR accumulator to direct byte</td>
+<td>2</td>
+<td>3</td>
+</tr>
+<tr>
+<td>ORL direct,#data</td>
+<td>OR immediate data to direct byte</td>
+<td>3</td>
+<td>4</td>
+</tr>
+<tr>
+<td>XRL A,Rn</td>
+<td>Exclusive OR register to accumulator</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>XRL A,direct</td>
+<td>Exclusive OR direct byte to accumulator</td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr>
+<td>XRL A,@Ri</td>
+<td>Exclusive OR indirect RAM to accumulator</td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>XRL A,#data</td>
+<td>Exclusive OR immediate data to accumulator</td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr>
+<td>XRL direct,A</td>
+<td>Exclusive OR accumulator to direct byte</td>
+<td>2</td>
+<td>3</td>
+</tr>
+<tr>
+<td>XORL direct,#data</td>
+<td>Exclusive OR immediate data to direct byte</td>
+<td>3</td>
+<td>4</td>
+</tr>
+<tr>
+<td>CLR A</td>
+<td>Clears the accumulator</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>CPL A</td>
+<td>Complements the accumulator (1=0, 0=1)</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>SWAP A</td>
+<td>Swaps nibbles within the accumulator</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>RL A</td>
+<td>Rotates bits in the accumulator left</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>RLC A</td>
+<td>Rotates bits in the accumulator left through carry</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>RR A</td>
+<td>Rotates bits in the accumulator right</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>RRC A</td>
+<td>Rotates bits in the accumulator right through carry</td>
+<td>1</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+
+<h4>Bit-oriented Instructions</h4>
+
+<p>Similar to logic instructions, bit-oriented instructions perform logic operations. The difference is that these are performed upon single bits.</p>
+<table class="def_table">
+<tbody>
+<tr>
+<th colspan="4"><b>Bit-oriented Instructions</b></th>
+</tr>
+<tr>
+<td><b>Mnemonic</b></td>
+<td><b>Description</b></td>
+<td><b>Byte</b></td>
+<td><b>Cycle</b></td>
+</tr>
+<tr>
+<td>CLR C</td>
+<td>Clears the carry flag</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>CLR bit</td>
+<td>Clears the direct bit</td>
+<td>2</td>
+<td>3</td>
+</tr>
+<tr>
+<td>SETB C</td>
+<td>Sets the carry flag</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>SETB bit</td>
+<td>Sets the direct bit</td>
+<td>2</td>
+<td>3</td>
+</tr>
+<tr>
+<td>CPL C</td>
+<td>Complements the carry flag</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>CPL bit</td>
+<td>Complements the direct bit</td>
+<td>2</td>
+<td>3</td>
+</tr>
+<tr>
+<td>ANL C,bit</td>
+<td>AND direct bit to the carry flag</td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr>
+<td>ANL C,/bit</td>
+<td>AND complements of direct bit to the carry flag</td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr>
+<td>ORL C,bit</td>
+<td>OR direct bit to the carry flag</td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr>
+<td>ORL C,/bit</td>
+<td>OR complements of direct bit to the carry flag</td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr>
+<td>MOV C,bit</td>
+<td>Moves the direct bit to the carry flag</td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr>
+<td>MOV bit,C</td>
+<td>Moves the carry flag to the direct bit</td>
+<td>2</td>
+<td>3</td>
+</tr>
+</tbody>
+</table>
+<h3 id="ch3.2">3.2 Description of all 8051 instructions</h3>
+<p>Here is a list of the operands and their meanings:</p>
+<ul class="default_font flat">
+<li><b>A</b> - accumulator;<br> <b>Rn</b> - is one of working registers (R0-R7) in the currently active RAM memory bank;</li>
+<li><b>Direct</b> - is any 8-bit address register of RAM. It can be any general-purpose register or a SFR (I/O port, control register etc.);</li>
+<li><b>@Ri</b> - is indirect internal or external RAM location addressed by register R0 or R1;</li>
+<li><b>#data</b> - is an 8-bit constant included in instruction (0-255);</li>
+<li><b>#data16</b> - is a 16-bit constant included as bytes 2 and 3 in instruction (0-65535);</li>
+<li><b>addr16</b> - is a 16-bit address. May be anywhere within 64KB of program memory;</li>
+<li><b>addr11</b> - is an 11-bit address. May be within the same 2KB page of program memory as the first byte of the following instruction;</li>
+<li><b>rel</b> - is the address of a close memory location (from -128 to +127 relative to the first byte of the following instruction). On the basis of it, assembler computes the value to add or subtract from the number currently stored in the program counter;</li>
+<li><b>bit</b> - is any bit-addressable I/O pin, control or status bit; and</li>
+<li><b>C</b> - is carry flag of the status register (register PSW).</li>
+</ul>
+<p><span class="red">ACALL addr11</span> - Absolute subroutine call</p>
+<p><span style="background: #87cefa; border: 1px solid #DDD; padding-left: 5px; padding-right: 5px;"><b>addr11:</b> Subroutine address</span></p>
+<p><b>Description:</b> Instruction unconditionally calls a subroutine located at the specified     code address. Therefore, the current address and the address of called subroutine must be     within the same 2K byte block of the program memory, starting from the first byte of     the instruction following ACALL.</p>
+<p><b>Syntax</b>: ACALL [subroutine name];<br> <b>Bytes</b>: 2 (instruction code, subroutine address);<br> <b>STATUS register flags</b>: No flags are affected.</p>
+<p><b>EXAMPLE:</b></p>
+<img title="ACALL" alt="ACALL" src="./Chapter 3 : The 8051 Instruction Set_files/01.gif">
+<p>Before execution: PC=0123h<br> After execution: PC=0345h</p>
+<p><span class="red">ADD A,Rn</span> - Adds the register Rn to the accumulator</p>
+<p><span style="background: #87cefa; border: 1px solid #DDD; padding-left: 5px; padding-right: 5px;"> <b>A</b>: accumulator<br> &nbsp;<b>Rn</b>: any R register (R0-R7) </span></p>
+<p><b>Description</b>: Instruction adds the register Rn (R0-R7) to the accumulator. After addition, the result is stored in the accumulator.</p>
+<p><b>Syntax</b>: ADD A,Rn;<br> <b>Byte</b>: 1 (instruction code);<br> <b>STATUS register flags</b>: C, OV and AC;</p>
+<p><b>EXAMPLE:</b></p>
+<img title="ADD A,Rn" alt="ADD A,Rn" src="./Chapter 3 : The 8051 Instruction Set_files/02.gif">
+<p>Before execution: A=2Eh (46 dec.) R4=12h (18 dec.)<br> After execution: A=40h (64 dec.) R4=12h</p>
+<p><span class="red">ADD A,@Ri</span> - Adds the indirect RAM to the accumulator</p>
+<p><span style="background: #87cefa; border: 1px solid #DDD; padding-left: 5px; padding-right: 5px;"> <b>A</b>: accumulator<br> &nbsp;<b>Ri</b>: Register R0 or R1 </span></p>
+<p><b>Description</b>: Instruction adds the indirect RAM to the accumulator.  	Address of indirect RAM is stored in the Ri register (R0 or R1). After addition, the result is stored in the accumulator.</p>
+<p><b>Syntax</b>: ADD A,@Ri;<br> <b>Byte</b>: 1 (instruction code);<br> <b>STATUS register flags</b>: C, OV and AC;</p>
+<p><b>EXAMPLE:</b></p>
+<img title="ADD A,@Ri" alt="ADD A,@Ri" src="./Chapter 3 : The 8051 Instruction Set_files/03.gif">
+<p>Register address: SUM = 4Fh R0=4Fh<br> Before execution: A= 16h (22 dec.) SUM= 33h (51 dec.)<br> After execution : A= 49h (73 dec.)</p>
+<p><span class="red">ADD A,direct</span> - Adds the direct byte to the accumulator</p>
+<p><span style="background: #87cefa; border: 1px solid #DDD; padding-left: 5px; padding-right: 5px;"> <b>A</b>: accumulator<br> &nbsp;<b>Direct</b>: Arbitrary register with address 0 - 255 (0 - FFh) </span></p>
+<p><b>Description</b>: Instruction adds the direct byte to the accumulator. As it is direct addressing, the direct can be any SFR or general-purpose register with address 0-7 Fh. The result is stored in the accumulator.</p>
+<p><b>Syntax</b>: ADD A, register name;<br> <b>Bytes</b>: 2 (instruction code, direct byte address);<br> <b>STATUS register flags</b>: C, OV and AC;</p>
+<p><b>EXAMPLE:</b></p>
+<img title="ADD A,Rx" alt="ADD A,Rx" src="./Chapter 3 : The 8051 Instruction Set_files/04.gif">
+<p>Before execution: SUM= 33h (51 dec.) A= 16h (22 dec.) <br> After execution: SUM= 33h (73 dec.) A= 49h (73 dec.)</p>
+<p><span class="red">ADDC A,Rn</span> - Adds the register to the accumulator with a carry flag</p>
+<p><span style="background: #87cefa; border: 1px solid #DDD; padding-left: 5px; padding-right: 5px;"> <b>A</b>: accumulator<br> &nbsp;<b>Rn</b>: any R register (R0-R7) </span></p>
+<p><b>Description</b>: Instruction adds the accumulator with a carry flag and Rn register (R0-R7). After addition, the result is stored in the accumulator.</p>
+<p><b>Syntax</b>: ADDC A,Rn;<br> <b>Byte</b>: 1 (instruction code);<br> <b>STATUS register flags</b>: C, OV and AC;</p>
+<p><b>EXAMPLE:</b></p>
+<img title="ADDC A,Rn" alt="ADD A,direct" src="./Chapter 3 : The 8051 Instruction Set_files/05.gif">
+<p>Before execution: A= C3h (195 dec.) R0= AAh (170 dec.) C=1<br> After execution: A= 6Eh (110 dec.) AC=0, C=1, OV=1</p>
+<p><span class="red">ADD A,#data</span> - Adds the immediate data to the accumulator</p>
+<p><span style="background: #87cefa; border: 1px solid #DDD; padding-left: 5px; padding-right: 5px;"> <b>A</b>: accumulator<br> &nbsp;<b>Data</b>: constant within 0-255 (0-FFh) </span></p>
+<p><b>Description</b>: Instruction adds data (0-255) to the accumulator. After addition, the result is stored in the accumulator.</p>
+<p><b>Syntax</b>: ADD A,#data;<br> <b>Bytes</b>: 2 (instruction code, data);<br> <b>STATUS register flags</b>: C, OV and AC;</p>
+<p><b>EXAMPLE:</b></p>
+<img title="ADD A,#X" alt="ADD A,#X" src="./Chapter 3 : The 8051 Instruction Set_files/06.gif">
+<p>Before execution: A= 16h (22 dec.)<br> After execution: A= 49h (73 dec.)</p>
+<p><span class="red">ADDC A,direct</span> - Adds the direct byte to the acumulator with a carry flag</p>
+<p><span style="background: #87cefa; border: 1px solid #DDD; padding-left: 5px; padding-right: 5px;"> <b>A</b>: accumulator<br> &nbsp;<b>Direct</b>: arbitrary register with address 0-255 (0-FFh) </span></p>
+<p><b>Description</b>: Instruction adds the direct byte to the accumulator with a carry flag.  	As it is direct addressing, the register can be any SFRs or     general purpose register with address 0-7Fh (0-127dec.). The result is stored in the     accumulator.</p>
+<p><b>Syntax</b>: ADDC A, register address;<br> <b>Bytes</b>: 2 (instruction code, direct);<br> <b>STATUS register flags</b>: C, OV and AC;</p>
+<p><b>EXAMPLE:</b></p>
+<img title="ADDC A,Rx" alt="ADDC A,Rx" src="./Chapter 3 : The 8051 Instruction Set_files/07.gif">
+<p>Before execution: A= C3h (195 dec.) TEMP = AAh (170 dec.) C=1<br> After execution: A= 6Eh (110 dec.) AC=0, C=1, OV=1</p>
+<p><span class="red">ADDC A,@Ri</span> - Adds the indirect RAM to the accumulator with a carry flag</p>
+<p><span style="background: #87cefa; border: 1px solid #DDD; padding-left: 5px; padding-right: 5px;"> <b>A</b>: accumulator<br> &nbsp;<b>Ri</b>: Register R0 or R1 </span></p>
+<p><b>Description</b>: Instruction adds the indirect RAM to the accumulator with a carry flag.  	RAM address is stored in the Ri register (R0 or R1). After addition, the result is stored in the accumulator.</p>
+<p><b>Syntax</b>: ADDC A,@Ri;<br> <b>Byte</b>: 1 (instruction code);<br> <b>STATUS register flags</b>: C, OV and AC;</p>
+<p><b>EXAMPLE:</b></p>
+<img title="ADDC A,@Ri" alt="ADDC A,@Ri" src="./Chapter 3 : The 8051 Instruction Set_files/08.gif">
+<p>Register address: SUM = 4Fh R0=4Fh<br> Before execution: A= C3h (195 dec.) SUM = AAh (170 dec.) C=1<br> After execution: A= 6Eh (110 dec.) AC=0, C=1, OV=1</p>
+<p><span class="red">ADDC A,#data</span> - Adds the immediate data to the accumulator with a carry flag</p>
+<p><span style="background: #87cefa; border: 1px solid #DDD; padding-left: 5px; padding-right: 5px;"> <b>A</b>: accumulator<br> &nbsp;<b>Data</b>: constant with address 0-255 (0-FFh) </span></p>
+<p><b>Description</b>: Instruction adds data (0-255) to the accumulator with a carry flag.  	After addition, the result is stored in the accumulator.</p>
+<p><b>Syntax</b>: ADDC A,#data;<br> <b>Bytes</b>: 2 (instruction code, data);<br> <b>STATUS register flags</b>: C, OV and AC;</p>
+<p><b>EXAMPLE:</b></p>
+<img title="ADDC A,#X" alt="ADDC A,#X" src="./Chapter 3 : The 8051 Instruction Set_files/09.gif">
+<p>Before execution: A= C3h (195 dec.) C=1<br> After execution: A= 6Dh (109 dec.) AC=0, C=1, OV=1</p>
+<p><span class="red">AJMP addr11</span> - Absoulte jump</p>
+<p><span style="background: #87cefa; border: 1px solid #DDD; padding-left: 5px; padding-right: 5px;"> <b>addr11</b>: Jump address </span></p>
+<p><b>Description</b>: Program continues execution after executing a jump to the specified address. Similar to the ACALL instruction, the jump must be executed within the same 2K byte block of program memory starting from the first byte of the instruction following AJMP.</p>
+<p><b>Syntax</b>: AJMP address (label);<br> <b>Bytes</b>: 2 (instruction code, jump address);<br> <b>STATUS register flags</b>: No flags are affected;</p>
+<p><b>EXAMPLE:</b></p>
+<img title="AJMP address" alt="AJMP address" src="./Chapter 3 : The 8051 Instruction Set_files/10.gif">
+<p>Before execution: PC=0345h SP=07h<br> After execution: PC=0123h SP=09h</p>
+<p><span class="red">ANL A,Rn</span> - AND register to the accumulator</p>
+<p><span style="background: #87cefa; border: 1px solid #DDD; padding-left: 5px; padding-right: 5px;"> <b>A</b>: accumulator<br> &nbsp;<b>Rn</b>: any R register (R0-R7) </span></p>
+<p><b>Description</b>: Instruction performs logic AND operation between the accumulator and Rn register. The result is stored in the accumulator.</p>
+<p><b>Syntax</b>: ANL A,Rn;<br> <b>Byte</b>: 1 (instruction code);<br> <b>STATUS register flags</b>: No flags are affected;</p>
+<p><b>EXAMPLE:</b></p>
+<img title="ANL A,Rn" alt="ANL A,Rn" src="./Chapter 3 : The 8051 Instruction Set_files/11.gif">
+<p>Before execution: A= C3h (11000011 Bin.)<br> R5= 55h (01010101 Bin.)<br> After execution: A= 41h (01000001 Bin.)</p>
+<p><span class="red">ANL A,direct</span> - AND direct byte to the accumulator</p>
+<p><span style="background: #87cefa; border: 1px solid #DDD; padding-left: 5px; padding-right: 5px;"> <b>A</b>: accumulator<br> &nbsp;<b>Direct</b>: arbitrary register with address 0 - 255 (0 - FFh) </span></p>
+<p><b>Description:</b> Instruction performs logic AND operation between the accumulator     and drect register. As it is direct addressing, the register can be any SFRs or general-purpose     register with address 0-7Fh (o-127 dec.). The result is stored in the accumulator.</p>
+<p><b>Syntax</b>: ANL A,direct;<br> <b>Byte</b>: 2 (instruction code, direct);<br> <b>STATUS register flags</b>: No flags are affected;</p>
+<p><b>EXAMPLE:</b></p>
+<img title="ANL A,Rx" alt="ANL A,Rx" src="./Chapter 3 : The 8051 Instruction Set_files/12.gif">
+<p>Before execution: A= C3h (11000011 Bin.)<br> MASK= 55h (01010101 Bin.)<br> After execution: A= 41h (01000001 Bin.)</p>
+<p><span class="red">ANL A,@Ri</span> - AND indirect RAM to the accumulator</p>
+<p><span style="background: #87cefa; border: 1px solid #DDD; padding-left: 5px; padding-right: 5px;"> <b>A</b>: accumulator<br> &nbsp;<b>Ri</b>: Register R0 or R1 </span></p>
+<p><b>Description</b>: Instruction performs logic AND operation between the accumulator and register. As it is indirect addressing, the register address is stored in the Ri register (R0 or R1). The result is stored in the accumulator.</p>
+<p><b>Syntax</b>: ANL A,@Ri;<br> <b>Byte</b>: 1 (instruction code);<br> <b>STATUS register flags</b>: No flags are affected;</p>
+<p><b>EXAMPLE:</b></p>
+<img title="ANL A,@Ri" alt="ANL A,@Ri" src="./Chapter 3 : The 8051 Instruction Set_files/13.gif">
+<p>Register address SUM = 4Fh R0=4Fh<br> Before execution: A= C3h (11000011 Bin.)<br> R0= 55h (01010101 Bin.)<br> After execution: A= 41h (01000001 Bin.)</p>
+<p><span class="red">ANL A,#data</span> - AND immediate data to the accumulator</p>
+<p><span style="background: #87cefa; border: 1px solid #DDD; padding-left: 5px; padding-right: 5px;"> <b>A</b>: accumulator<br> &nbsp;<b>Data</b>: constant in the range of 0-255 (0-FFh) </span></p>
+<p><b>Description:</b> Instruction performs logic AND operation between the accumulator     and data. The result is stored in the accumulator.</p>
+<p><b>Syntax</b>: ANL A,#data;<br> <b>Bytes</b>: 2 (instruction code, data);<br> <b>STATUS register flags</b>: No flags are affected;</p>
+<p><b>EXAMPLE:</b></p>
+<img title="ANL A,#X" alt="ANL A,#X" src="./Chapter 3 : The 8051 Instruction Set_files/14.gif">
+<p>Before execution: A= C3h (11000011 Bin.)<br> After execution: A= 41h (01000001 Bin.)</p>
+<p><span class="red">ANL direct,A</span> - AND accumulator to direct byte</p>
+<p><span style="background: #87cefa; border: 1px solid #DDD; padding-left: 5px; padding-right: 5px;"> <b>Direct</b>: arbitrary register with address 0-255 (0-FFh)<br> &nbsp;<b>A</b>: accumulator </span></p>
+<p><b>Description</b>: Instruction performs logic AND operation between direct byte     and accumulator. As it is direct addressing, the register can be any SFRs or general-purpose     register with address 0-7Fh (0-127 dec.). The result is stored in the direct byte.</p>
+<p><b>Syntax</b>: ANL register address,A;<br> <b>Bytes</b>: 2 (instruction code, direct byte address);<br> <b>STATUS register flags</b>: No flags are affected.</p>
+<p><b>EXAMPLE:</b></p>
+<img title="ANL Rx,A" alt="ANL Rx,A" src="./Chapter 3 : The 8051 Instruction Set_files/15.gif">
+<p>Before execution: A= C3h (11000011 Bin.)<br> MASK= 55h (01010101 Bin.)<br> After execution: MASK= 41h (01000001 Bin.)</p>
+<p><span class="red">ANL direct,#data</span> - AND immediate data to direct byte</p>
+<p><span style="background: #87cefa; border: 1px solid #DDD; padding-left: 5px; padding-right: 5px;"> <b>Direct</b>: Arbitrary register with address 0 - 255 (0 - FFh)<br> &nbsp;<b>Data</b>: constant in the range between 0-255 (0-FFh) </span></p>
+<p><b>Description</b>: Instruction performs logic AND operation between direct byte and data.  	As it is direct addressing, the register can be any SFRs or general-purpose     register with address 0-7Fh (0-127 dec.). The result is     stored in the direct byte.</p>
+<p><b>Syntax</b>: ANL register address ,#data;<br> <b>Bytes</b>: 3 (instruction code, direct byte address, data);<br> <b>STATUS register flags</b>: No flags are affected;</p>
+<p><b>EXAMPLE:</b></p>
+<img title="ANL Rx,#X" alt="ANL Rx,#X" src="./Chapter 3 : The 8051 Instruction Set_files/16.gif">
+<p>Before execution: X= C3h (11000011 Bin.)     MASK= 55h (01010101 Bin.)     After execution: MASK= 41h (01000001 Bin.)</p>
+<p><span class="red">ANL C,bit</span> - AND direct bit to the carry flag</p>
+<p><span style="background: #87cefa; border: 1px solid #DDD; padding-left: 5px; padding-right: 5px;"> <b>C</b>: Carry flag<br> &nbsp;<b>Bit</b>: any bit of RAM </span></p>
+<p><b>Description</b>: Instruction performs logic AND operation between the direct bit and the carry flag.</p>
+<table class="def_table">
+<tbody>
+<tr>
+<th><b>bit</b></th>
+<th><b>C</b></th>
+<th><b>C AND bit</b></th>
+</tr>
+<tr>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+</tr>
+<tr>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<p><b>Syntax</b>: ANL C, bit address;<br> <b>Bytes</b>: 2 (instruction code, bit address);<br> <b>STATUS register flags</b>: C;</p>
+<p><b>EXAMPLE:</b></p>
+<img title="ANL C,bit" alt="ANL C,bit" src="./Chapter 3 : The 8051 Instruction Set_files/17.gif">
+<p>Before execution: ACC= 43h (01000011 Bin.)<br> C=1<br> After execution: ACC= 43h (01000011 Bin.)<br> C=0</p>
+<p><span class="red">ANL C,/bit</span> - AND complements of direct bit to the carry flag</p>
+<p><span style="background: #87cefa; border: 1px solid #DDD; padding-left: 5px; padding-right: 5px;"> <b>C</b>: carry flag<br> &nbsp;<b>Bit</b>: any bit of RAM </span></p>
+<p>Description: Instruction performs logic AND operation     between inverted addressed bit and the carry flag. The     result is stored in the carry flag.</p>
+<table class="def_table">
+<tbody>
+<tr>
+<th><b>bit</b></th>
+<th><b>bit</b></th>
+<th><b>C</b></th>
+<th><b>C <span style="text-decoration: underline;">AND</span> bit</b></th>
+</tr>
+<tr>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+<p><b>Syntax</b>: ANL C,/[bit address];<br> <b>Bytes</b>: 2 (instruction code, bit address);<br> <b>STATUS register flags</b>: No flags are affected;</p>
+<p><b>EXAMPLE:</b></p>
+<img title="ANL C,/bit" alt="ANL C,/bit" src="./Chapter 3 : The 8051 Instruction Set_files/18.gif">
+<p>Before execution: ACC= 43h (01000011 Bin.)<br> C=1<br> After execution: ACC= 43h (01000011 Bin.)<br> C=1</p>
+<p><span class="red">CJNE A,direct,rel</span> - Compares direct byte to the accumulator and jumps if not equal</p>
+<p><span style="background: #87cefa; border: 1px solid #DDD; padding-left: 5px; padding-right: 5px;"> <b>A</b>: accumulator<br> &nbsp;<b>Direct</b>: arbitrary register with address 0-255 (0-FFh)<br> &nbsp;<b>addr</b>: jump address </span></p>
+<p><b>Description:</b> Instruction first compares the number in the accumulator with the directly addressed byte.  	If they are equal, the program proceeds with execution. Otherwise, a     jump to the specified address will be executed. This is a short jump     instruction, which means that the address of a new location must be relatively near the     current one (-128 to +127 locations relative to the first following instruction).</p>
+<p><b>Syntax</b>: CJNE A,direct,[jump address];<br> <b>Bytes</b>: 3 (instruction code, direct byte address, jump address);<br> <b>STATUS register flags</b>: C;</p>
+<p><b>EXAMPLE:</b></p>
+<img title="CJNE A,Rx,rel" alt="CJNE A,Rx,rel" src="./Chapter 3 : The 8051 Instruction Set_files/19.gif">
+<p>Before execution: PC=0145h A=27h<br> After execution: if MAX≠27: PC=0123h<br> If MAX=27: PC=0146h</p>
+<p><span class="red">CJNE A,#data,rel</span> - Compares immediate data to the accumulator and jumps if not equal</p>
+<p><span style="background: #87cefa; border: 1px solid #DDD; padding-left: 5px; padding-right: 5px;"> <b>A</b>: accumulator<br> &nbsp;<b>Data</b>: constant in the range of 0-255 (0-FFh) </span></p>
+<p>Description: Instruction first compares the number in the accumulator with     the immediate data. If they are equal, the program proceeds with execution. Otherwise, a jump to the     specified address will be executed. This is a short jump instruction,     which means that the address of a new location must be relatively near the current one (-128 to +127 locations relative to the first following instruction).</p>
+<p><b>Syntax</b>: CJNE A,X,[jump address];<br> <b>Bytes</b>: 3 (instruction code, data, jump address);<br> <b>STATUS register flags</b>: C;</p>
+<p><b>EXAMPLE:</b></p>
+<img title="CJNE A,Rx,rel" alt="CJNE A,Rx,rel" src="./Chapter 3 : The 8051 Instruction Set_files/20.gif">
+<p>Before execution: PC=0445h<br> After execution: If A≠33: PC=0423h<br> If A=33: PC=0446h</p>
+<p><span class="red">CJNE Rn,#data,rel</span> - Compares immediate data to the register Rn and jumps if not equal</p>
+<p><span style="background: #87cefa; border: 1px solid #DDD; padding-left: 5px; padding-right: 5px;"> <b>Rn</b>: Any R register (R0-R7)<br> &nbsp;<b>Data</b>: Constant in the range of 0 - 255 (0-FFh)<br> &nbsp;<b>addr</b>: Jump address </span></p>
+<p><b>Description</b>: Instruction first compares immediate data to the register Rn. If they are equal, the program proceeds with execution. Otherwise, a jump to the specified     address will be executed. This is a short jump instruction, which means that the address of a new location must be relatively near the current one 	(-128 to + 127 locations relative to the first following instruction).</p>
+<p><b>Syntax</b>: CJNE Rn,data,[jump address];<br> <b>Bytes</b>: 3 (instruction code, data, jump address);<br> <b>STATUS register flags</b>: C;</p>
+<p><b>EXAMPLE:</b></p>
+<img title="CJNE Rn,#X,rel" alt="CJNE Rn,#X,rel" src="./Chapter 3 : The 8051 Instruction Set_files/21.gif">
+<p>Before execution: PC=0345h<br> After execution: If R5≠44h: PC=0323h<br> If R5=44h: PC=0346h</p>
+<p><span class="red">CJNE @Ri,#data,rel</span> - Compares immediate data to indirectly addressed register and jumps if not equal</p>
+<p><span style="background: #87cefa; border: 1px solid #DDD; padding-left: 5px; padding-right: 5px;"> <b>Ri</b>: Register R0 or R1<br> &nbsp;<b>Data</b>: Constant in the range of 0 - 255 (0-FFh) </span></p>
+<p><b>Description</b>: This instruction first compares immediate data to indirectly addressed register. If they are equal, the program proceeds with execution. Otherwise, a jump to the specified address in the program will be executed. This is a short jump instruction, which means that the address of a new location must be relatively near the current one (-128 to +127 locations relative to the next instruction).</p>
+<p><b>Syntax</b>: CJNE @Ri,data,[jump address];<br> <b>Bytes</b>: 3 (instruction code, data, jump address);<br> <b>STATUS register flags</b>: C;</p>
+<p><b>EXAMPLE:</b></p>
+<img title="CJNE @Ri,#X,rel" alt="CJNE @Ri,#X,rel" src="./Chapter 3 : The 8051 Instruction Set_files/22.gif">
+<p>Before execution: Register Address SUM=F3h<br> PC=0345h R0=F3h<br> After execution: If SUM≠44h: PC=0323h<br> If SUM=44h: PC=0346h</p>
+<p><span class="red">CLR A</span> - Clears the accumulator</p>
+<p><span style="background: #87cefa; border: 1px solid #DDD; padding-left: 5px; padding-right: 5px;"> <b>A</b>: accumulator </span></p>
+<p><b>Description</b>: Instruction clears the accumulator.</p>
+<p><b>Syntax</b>: CLR A;<br> <b>Byte</b>: 1 (instruction code);<br> <b>STATUS register flags</b>: No flags are affected.</p>
+<p><b>EXAMPLE:</b></p>
+<img title="CLR A" alt="CLR A" src="./Chapter 3 : The 8051 Instruction Set_files/23.gif">
+<p>After execution: A=0</p>
+<p><span class="red">CLR C</span> - clears the carry flag</p>
+<p><span style="background: #87cefa; border: 1px solid #DDD; padding-left: 5px; padding-right: 5px;"> <b>C</b>: Carry flag </span></p>
+<p><b>Description</b>: Instruction clears the carry flag.</p>
+<p><b>Syntax</b>: CLR C;<br> <b>Byte</b>: 1 (instruction code);<br> <b>STATUS register flags</b>: C;</p>
+<p><b>EXAMPLE:</b></p>
+<img title="CLR C" alt="CLR C" src="./Chapter 3 : The 8051 Instruction Set_files/24.gif">
+<p>After execution: C=0</p>
+<p><span class="red">CLR bit</span> - clears the direct bit</p>
+<p><span style="background: #87cefa; border: 1px solid #DDD; padding-left: 5px; padding-right: 5px;"> <b>Bit</b>: any bit of RAM </span></p>
+<p><b>Description</b>: Instruction clears the specified bit.</p>
+<p><b>Syntax</b>: CLR [bit address];<br> <b>Bytes</b>: 2 (instruction code, bit address);<br> <b>STATUS register flags</b>: No flags are affected.</p>
+<p><b>EXAMPLE:</b></p>
+<img title="CLR bit" alt="CLR bit" src="./Chapter 3 : The 8051 Instruction Set_files/25.gif">
+<p>Before execution: P0.3=1 (input pin)<br> After execution: P0.3=0 (output pin)</p>
+<p><span class="red">CPL A</span> - Complements the accumulator</p>
+<p><span style="background: #87cefa; border: 1px solid #DDD; padding-left: 5px; padding-right: 5px;"> <b>A</b>: accumulator </span></p>
+<p><b>Description:</b> Instruction complements all the bits in the accumulator (1==&gt;0, 0==&gt;1).</p>
+<p><b>Syntax</b>: CPL A;<br> <b>Bytes</b>: 1 (instruction code);<br> <b>STATUS register flags</b>: No flags are affected.</p>
+<p><b>EXAMPLE:</b></p>
+<img title="CPL A" alt="CPL A" src="./Chapter 3 : The 8051 Instruction Set_files/26.gif">
+<p>Before execution: A= (00110110)<br> After execution: A= (11001001)</p>
+<p><span class="red">CPL bit</span> - Complements the direct bit</p>
+<p><span style="background: #87cefa; border: 1px solid #DDD; padding-left: 5px; padding-right: 5px;"> <b>Bit</b>: any bit of RAM </span></p>
+<p><b>Description</b>: Instruction coplements the specified bit of RAM (0==&gt;1, 1==&gt;0).</p>
+<p><b>Syntax</b>: CPL [bit address];<br> <b>Bytes</b>: 2 (instruction code, bit address);<br> <b>STATUS register flags:</b> No flags are affected;</p>
+<p><b>EXAMPLE:</b></p>
+<img title="CPL bit" alt="CPL bit" src="./Chapter 3 : The 8051 Instruction Set_files/27.gif">
+<p>Before execution: P0.3=1 (input pin)<br> After execution: P0.3=0 (output pin)</p>
+<p><span class="red">CPL C</span> - Complements the carry flag</p>
+<p><span style="background: #87cefa; border: 1px solid #DDD; padding-left: 5px; padding-right: 5px;"> <b>C</b>: Carry flag </span></p>
+<p><b>Description:</b> Instruction complements the carry flag (0==&gt;1, 1==&gt;0).</p>
+<p><b>Syntax</b>: CPL C;<br> <b>Byte</b>: 1 (instruction code);<br> <b>STATUS register flags:</b> C;</p>
+<p><b>EXAMPLE:</b></p>
+<img title="CPL C" alt="CPL C" src="./Chapter 3 : The 8051 Instruction Set_files/28.gif">
+<p>Before execution: C=1<br> After execution: C=0</p>
+<p><span class="red">DA A</span> - Decimal adjust accumulator</p>
+<p><span style="background: #87cefa; border: 1px solid #DDD; padding-left: 5px; padding-right: 5px;"> <b>A</b>: accumulator </span></p>
+<p><b>Description:</b> Instruction adjusts the contents of the accumulator to correspond to a BCD     number after two BCD numbers have been added by the ADD and ADDC instructions. The result in form of two 4-digit BCD numbers is stored in the accumulator.</p>
+<p><b>Syntax</b>: DA A;<br> <b>Byte</b>: 1 (instruction code);<br> <b>STATUS register flags:</b> C;</p>
+<p><b>EXAMPLE:</b></p>
+<img title="DA A" alt="DA A" src="./Chapter 3 : The 8051 Instruction Set_files/29.gif">
+<p>Before execution: A=56h (01010110) 56 BCD<br> B=67h (01100111) 67BCD<br> After execution: A=BDh (10111101)<br> After BCD conversion: A=23h (00100011), C=1 (Overflow)<br> (C+23=123) = 56+67</p>
+<p><span class="red">DEC A</span> - Decrements the accumulator by 1</p>
+<p><span style="background: #87cefa; border: 1px solid #DDD; padding-left: 5px; padding-right: 5px;"> <b>A</b>: accumulator </span></p>
+<p><b>Description</b>: Instruction decrements the value in the accumulator by 1. If there     is a 0 in the accumulator, the result of the operation is FFh. (255 dec.)</p>
+<p><b>Syntax</b>: DEC A;<br> <b>Byte</b>: 1 (instruction code);<br> <b>STATUS register flags:</b> No flags are affected;</p>
+<p><b>EXAMPLE:</b></p>
+<img title="DEC A" alt="DEC A" src="./Chapter 3 : The 8051 Instruction Set_files/30.gif">
+<p>Before execution: A=E4h<br> After execution: A=E3h</p>
+<p><span class="red">DEC Rn</span> - Decrements the register Rn by 1</p>
+<p><span style="background: #87cefa; border: 1px solid #DDD; padding-left: 5px; padding-right: 5px;"> <b>Rn</b>: any R register (R0-R7) </span></p>
+<p><b>Description</b>: Instruction decrements the value in the Rn register by 1. If there is     a 0 in the register, the result of the operation will be FFh. (255 dec.)</p>
+<p><b>Syntax</b>: DEC Rn;<br> <b>Byte</b>: 1 (instruction code);<br> <b>STATUS register flags:</b> No flags are affected;</p>
+<p><b>EXAMPLE:</b></p>
+<img title="DEC Rn" alt="DEC Rn" src="./Chapter 3 : The 8051 Instruction Set_files/31.gif">
+<p>Before execution: R3=B0h<br> After execution: R3=AFh</p>
+<p><span class="red">DEC direct</span> - Decrements the direct byte by 1</p>
+<p><span style="background: #87cefa; border: 1px solid #DDD; padding-left: 5px; padding-right: 5px;"> <b>Direct</b>: arbitrary register with address 0-255 (0-FFh) </span></p>
+<p><b>Description:</b> Instruction decrements the value of directly addressed register by 1. As it is     direct addressing, the register must be within the first 255 locations of RAM. If there is a 0 in     the register, the result will be FFh.</p>
+<p><b>Syntax</b>: DEC [register address];<br> <b>Byte</b>: 2 (instruction code, direct);<br> <b>STATUS register flags:</b> No flags are affected;</p>
+<p><b>EXAMPLE:</b></p>
+<img title="DEC Rx" alt="DEC Rx" src="./Chapter 3 : The 8051 Instruction Set_files/32.gif">
+<p>Before execution: CNT=0<br> After execution: CNT=FFh</p>
+<p><span class="red">DIV AB</span> - Divides the accumulator by the register B</p>
+<p><span style="background: #87cefa; border: 1px solid #DDD; padding-left: 5px; padding-right: 5px;"> <b>A</b>: accumulator<br> &nbsp;<b>B</b>: Register B </span></p>
+<p><b>Description</b>: Instruction divides the value in the accumulator by the value     in the B register. After division the integer part of result is stored in the     accumulator while the register contains the remainder. In case of dividing by     1, the flag OV is set and the result of division is unpredictable. The 8-bit quotient     is stored in the accumulator and the 8-bit remainder is stored in the B register.</p>
+<p><b>Syntax</b>: DIV AB;<br> <b>Byte</b>: 1 (instruction code);<br> <b>STATUS register flags:</b> C, OV;</p>
+<p><b>EXAMPLE:</b></p>
+<img title="DIV AB" alt="DIV AB" src="./Chapter 3 : The 8051 Instruction Set_files/33.gif">
+<p>Before execution: A=FBh (251dec.) B=12h (18 dec.)<br> After execution: A=0Dh (13dec.) B=11h (17dec.)<br> 13·18 + 17 =251</p>
+<p><span class="red">DEC @Ri</span> - Decrements the indirect RAM by 1</p>
+<p><span style="background: #87cefa; border: 1px solid #DDD; padding-left: 5px; padding-right: 5px;"> <b>Ri</b>: Register R0 or R1 </span></p>
+<p><b>Description:</b> This instruction decrements the value in the indirectly addressed register of RAM by 1. The     register address is stored in the Ri register (R0 or R1). If there is a 0 in the register, the result     will be FFh.</p>
+<p><b>Syntax</b>: DEC @Ri;<br> <b>Byte</b>: 1 (instruction code);<br> <b>STATUS register flags:</b> No flags are affected;</p>
+<p><b>EXAMPLE:</b></p>
+<img title="DEC @Ri" alt="DEC @Ri" src="./Chapter 3 : The 8051 Instruction Set_files/34.gif">
+<p>Register Address CNT = 4Fh R0=4Fh<br> Before execution: CNT=35h<br> After execution: CNT= 34h</p>
+<p><span class="red">DJNZ direct,rel</span> - Decrements direct byte by 1 and jumps if not 0</p>
+<p><span style="background: #87cefa; border: 1px solid #DDD; padding-left: 5px; padding-right: 5px;"> <b>Direct</b>: arbitrary register with address 0-255 (0-FFh)<br> &nbsp;<b>addr</b>: Jump address </span></p>
+<p><b>Description:</b> This instruction first decrements value in the register. If the     result is 0, the program proceeds with execution. Otherwise, a jump to the specified     address in the program will be executed. As it is direct addressing, the register must be within     the first 255 locations of RAM. This is a short jump instruction, which means that the     address of a new location must be relatively near the current one     (-128 to +127 locations relative to the first following instruction).</p>
+<p><b>Syntax</b>: DJNZ direct,[jump address];<br> <b>Bytes</b>: 3 (instruction code, direct, jump address);<br> <b>STATUS register flags:</b> No flags are affected;</p>
+<p><b>EXAMPLE:</b></p>
+<img title="DJNZ Rx,rel" alt="DJNZ Rx,rel" src="./Chapter 3 : The 8051 Instruction Set_files/35.gif">
+<p>Before execution: PC=0445h<br> After execution: If CNT≠0: PC=0423h<br> If CNT=0: PC=0446h</p>
+<p><span class="red">DJNZ Rn,rel</span> - Decrements the Rn register by 1 and jumps if not 0</p>
+<p><span style="background: #87cefa; border: 1px solid #DDD; padding-left: 5px; padding-right: 5px;"> <b>Rn</b>: any R register (R0-R7)<br> &nbsp;<b>addr</b>: jump address </span></p>
+<p><b>Description</b>: This instruction first decrements the value in the Rn register. If the     result is 0, the program proceeds with execution. Otherwise, a jump to the specified address     in the program will be executed. This is a short jump instruction, which means that the     address of a new location must be relatively near the current one (-     128 to +127 locations relative to the first following instruction).</p>
+<p><b>Syntax</b>: DJNZ Rn, [jump address];<br> <b>Bytes</b>: 2 (instruction code, jump address);<br> <b>STATUS register flags:</b> No flags are affected;</p>
+<p><b>EXAMPLE:</b></p>
+<img title="DJNZ Rn,rel" alt="DJNZ Rn,rel" src="./Chapter 3 : The 8051 Instruction Set_files/36.gif">
+<p>Before execution: PC=0445h<br> After execution: If R1≠0: PC=0423h<br> If R1=0: PC=0446h</p>
+<p><span class="red">INC Rn</span> - Increments the Rn register by 1</p>
+<p><span style="background: #87cefa; border: 1px solid #DDD; padding-left: 5px; padding-right: 5px;"> <b>Rn</b>: any R register (R0-R7) </span></p>
+<p>Description: Instruction increments the value in the Rn register by 1. If the     register includes the number 255, the result of the operation will be 0.</p>
+<p><b>Syntax</b>: INC Rn;<br> <b>Byte</b>: 1 (instruction code);<br> <b>STATUS register flags:</b> No flags are affected;</p>
+<p><b>EXAMPLE:</b></p>
+<img title="INC Rn" alt="INC Rn" src="./Chapter 3 : The 8051 Instruction Set_files/37.gif">
+<p>Before execution: R4=18h<br> After execution: R4=19h</p>
+<p><span class="red">INC A</span> - Increments the accumulator by 1</p>
+<p><span style="background: #87cefa; border: 1px solid #DDD; padding-left: 5px; padding-right: 5px;"> <b>A</b>: accumulator </span></p>
+<p><b>Description</b>: This instruction increments the value in the accumulator by 1. If     the accumulator includes the number 255, the result of the operation will be 0.</p>
+<p><b>Syntax</b>: INC A;<br> <b>Byte</b>: 1 (instruction code);<br> <b>STATUS register flags:</b> No flags are affected;</p>
+<p><b>EXAMPLE:</b></p>
+<img title="INC A" alt="INC A" src="./Chapter 3 : The 8051 Instruction Set_files/38.gif">
+<p>Before execution: A=E4h<br> After execution: A=E5h</p>
+<p><span class="red">INC @Ri</span> - Increments the value of indirectly addressed register of RAM by 1</p>
+<p><span style="background: #87cefa; border: 1px solid #DDD; padding-left: 5px; padding-right: 5px;"> <b>Ri</b>: Register R0 or R1 </span></p>
+<p><b>Description:</b> This instruction increments the value in the directly addressed register of RAM by 1. The register     address is stored in the Ri Register (R0 or R1). If the register includes the number 255,     the result of the operation will be 0.</p>
+<p><b>Syntax</b>: INC @Ri;<br> <b>Byte</b>: 1 (instruction code);<br> <b>STATUS register flags:</b> No flags are affected;</p>
+<p><b>EXAMPLE:</b></p>
+<img title="INC @Ri" alt="INC @Ri" src="./Chapter 3 : The 8051 Instruction Set_files/39.gif">
+<p>Register Address CNT = 4Fh<br> Before execution: CNT=35h R1=4Fh<br> After execution: CNT=36h</p>
+<p><span class="red">INC direct</span> - Increments the direct byte by 1</p>
+<p><span style="background: #87cefa; border: 1px solid #DDD; padding-left: 5px; padding-right: 5px;"> <b>Direct</b>: arbitrary register with address 0-255 (0-FFh) </span></p>
+<p><b>Description:</b> Instruction increments the direct byte by 1. If the     register includes the number 255, the result of the operation will be 0. As it is direct     addressing, the register must be within the first 255 RAM locations.</p>
+<p><b>Syntax</b>: INC direct;<br> <b>Bytes</b>: 2 (instruction code, direct byte address);<br> <b>STATUS register flags:</b> No flags are affected;</p>
+<p><b>EXAMPLE:</b></p>
+<img title="INC Rx" alt="INC Rx" src="./Chapter 3 : The 8051 Instruction Set_files/40.gif">
+<p>Before execution: CNT=33h<br> After execution: CNT=34h</p>
+<p><span class="red">JB bit,rel</span> - Jump if direct bit is set</p>
+<p><span style="background: #87cefa; border: 1px solid #DDD; padding-left: 5px; padding-right: 5px;"> <b>addr</b>: Jump address<br> &nbsp;<b>Bit</b>: any bit of RAM </span></p>
+<p><b>Description</b>: If the bit is set, a jump to the specified address will be executed.     Otherwise, if the value of bit is 0, the program proceeds with the next instruction.     This is a short jump instruction, which means that the address of a new location must     be relatively near the current one (-128 to + 127 locations relative     to the first following instruction).</p>
+<p><b>Syntax</b>: JB bit, [jump address];<br> <b>Bytes</b>: 3 (instruction code, bit address, jump address);<br> <b>STATUS register flags:</b> No flags are affected;</p>
+<p><b>EXAMPLE:</b></p>
+<img title="JB bit,rel" alt="JB bit,rel" src="./Chapter 3 : The 8051 Instruction Set_files/41.gif">
+<p>Before execution: PC=0323h<br> After execution: If P0.5=0: PC=0324h<br> If P0.5=1: PC=0345h</p>
+<p><span class="red">INC DPTR</span> - Increments the Data Pointer by 1</p>
+<p><span style="background: #87cefa; border: 1px solid #DDD; padding-left: 5px; padding-right: 5px;"> <b>DPTR</b>: Data Pointer </span></p>
+<p><b>Description:</b> Instruction increments the value of the 16-bit data pointer by     1. This is the only 16-bit register upon which this operation can be performed.</p>
+<p><b>Syntax</b>: INC DPTR;<br> <b>Byte</b>: 1 (instruction code);<br> <b>STATUS register flags:</b> No flags are affected;</p>
+<p><b>EXAMPLE:</b></p>
+<img title="INC DPTR" alt="INC DPTR" src="./Chapter 3 : The 8051 Instruction Set_files/42.gif">
+<p>Before execution: DPTR = 13FF (DPH = 13h DPL = FFh )<br> After execution: DPTR = 1400 (DPH = 14h DPL = 0)</p>
+<p><span class="red">JC rel</span> - Jump if carry flag is set</p>
+<p><span style="background: #87cefa; border: 1px solid #DDD; padding-left: 5px; padding-right: 5px;"> <b>addr</b>: Jump address </span></p>
+<p><b>Description:</b> Instruction first checks if the carry flag is set. If set, a jump     to the specified address is executed. Otherwise, the program proceeds with the next     instruction. This is a short jump instruction, which means that the address of a new     location must be relatively near the current one (-129 to + 127 locations     relative to the first following instruction).</p>
+<p><b>Syntax</b>: JC [jump address];<br> <b>Bytes</b>: 2 (instruction code, jump value);<br> <b>STATUS register flags:</b> No flags are affected;</p>
+<p><b>EXAMPLE:</b></p>
+<img title="JC [jump address]" alt="JC [jump address]" src="./Chapter 3 : The 8051 Instruction Set_files/43.gif">
+<p>Before instruction: PC=0323h<br> After instruction: If C=0: PC=0324h<br> If C=1: PC=0345h</p>
+<p><span class="red">JBC bit,rel</span> - Jump if direct bit is set</p>
+<p><span style="background: #87cefa; border: 1px solid #DDD; padding-left: 5px; padding-right: 5px;"> <b>Bit</b>: any bit of RAM<br> &nbsp;<b>addr</b>: Jump Address </span></p>
+<p><b>Description:</b> This instruction first checks if the bit is set. If set, a jump to the     specified address is executed and the bit is cleared. Otherwise, the program     proceeds with the first following instruction. This is a short jump instruction, which means     that the address of a new location must be relatively near the current one     (-129 to + 127 locations relative to the first following instruction).</p>
+<p><b>Syntax</b>: JBC bit, [jump address];<br> <b>Bytes</b>: 3 (instruction code, bit address, jump address);<br> <b>STATUS register flags:</b> No flags are affected;</p>
+<p><b>EXAMPLE:</b></p>
+<img title="JBC bit,rel" alt="JBC bit,rel" src="./Chapter 3 : The 8051 Instruction Set_files/44.gif">
+<p>Before execution: PC=0323h<br> After execution: If TEST0.4=1: PC=0345h, TEST0.4=0<br> If TEST0.4=0: PC=0324h, TEST0,4=0</p>
+<p><span class="red">JNB bit,rel</span> - Jump if direct bit is not set</p>
+<p><span style="background: #87cefa; border: 1px solid #DDD; padding-left: 5px; padding-right: 5px;"> <b>addr</b>: Jump address<br> &nbsp;<b>Bit</b>: any bit of RAM </span></p>
+<p><b>Description:</b> If the bit is cleared, a jump to the specified address will be executed.     Otherwise, if the bit value is 1, the program proceeds with the first following instruction.     This is a short jump instruction, which means that the address of a new location     must be relatively near the current one (-129 to + 127 locations relative     to the first following instruction).</p>
+<p><b>Syntax</b>: JNB bit,[jump address];<br> <b>Bytes</b>: 3 (instruction code, bit address, jump address);<br> <b>STATUS register flags:</b> No flags are affected;</p>
+<p><b>EXAMPLE:</b></p>
+<img title="JNB bit,rel" alt="JNB bit,rel" src="./Chapter 3 : The 8051 Instruction Set_files/45.gif">
+<p>Before execution: PC=0323h<br> After execution: If P0.5=1: PC=0324h<br> If P0.5=0: PC=0345h</p>
+<p><span class="red">JMP @A+DPTR</span> - Jump indirect relative to the DPTR</p>
+<p><span style="background: #87cefa; border: 1px solid #DDD; padding-left: 5px; padding-right: 5px;"> <b>A</b>: accumulator<br> &nbsp;<b>DPTR</b>: Data Pointer </span></p>
+<p><b>Description:</b> This instruction causes a jump to the address calculated by     adding value stored in the accumulator to the 16-bit number in the DPTR Register. It is used     with complex program branching where the accumulator affects jump address, for     example when reading a table. Neither accumulator nor DPTR register are affected.</p>
+<p><b>Syntax</b>: JMP @A+DPTR;<br> <b>Byte</b>: 1 (instruction code);<br> <b>STATUS register flags:</b> No flags are affected;</p>
+<p><b>EXAMPLE:</b></p>
+<img title="JMP @A+DPTR" alt="JMP @A+DPTR" src="./Chapter 3 : The 8051 Instruction Set_files/46.gif">
+<p>Before execution: PC=223 DPTR=1400h<br> After execution: PC = 1402h if A=2<br> PC = 1404h if A=4<br> PC = 1406h if A=6</p>
+<p><b>Note:</b><br> As instructions AJMP LABELS occupy two locations each, the values in the accumulator specifying     them must be different from each other by 2.</p>
+<p><span class="red">JNZ rel</span> - Jump if accumulator is not zero</p>
+<p><span style="background: #87cefa; border: 1px solid #DDD; padding-left: 5px; padding-right: 5px;"> <b>addr</b>: Jump Address </span></p>
+<p><b>Description:</b> This instruction checks if the value stored in the accumulator is 0. If     not, a jump to the specified address will be executed. Otherwise, the program proceeds     with the first following instruction. This is a short jump instruction, which means that     the address of a new location must be relatively near the current one     (-129 to + 127 locations relative to the first following instruction).</p>
+<p><b>Syntax</b>: JNZ [jump address]:<br> <b>Bytes</b>: 2 (instruction code, jump value);<br> <b>STATUS register flags:</b> No flags are affected;</p>
+<p><b>EXAMPLE:</b></p>
+<img title="JNZ rel" alt="JNZ rel" src="./Chapter 3 : The 8051 Instruction Set_files/47.gif">
+<p>Before execution: PC=0323h<br> After execution: If A=0: PC=324h<br> If A≠0: PC=283h</p>
+<p><span class="red">JNC rel</span> - Jump if carry flag is not set</p>
+<p><span style="background: #87cefa; border: 1px solid #DDD; padding-left: 5px; padding-right: 5px;"> <b>addr</b>: Jump Address </span></p>
+<p><b>Description:</b> This instruction first checks whether the carry flag is set. If not, a jump     to the specified address will be executed. Otherwise, the program proceeds with the     first following instruction. This is a short jump instruction, which means that the address of     a new location must be relatively near the current one (-129 to +     127 locations relative to the first following instruction).</p>
+<p><b>Syntax</b>: JNC [jump address];<br> <b>Bytes</b>: 2 (instruction code, jump value);<br> <b>STATUS register flags:</b> No flags are affected;</p>
+<p><b>EXAMPLE:</b></p>
+<img title="JNC rel" alt="JNC rel" src="./Chapter 3 : The 8051 Instruction Set_files/48.gif">
+<p>Before execution: PC=0323h<br> After execution: If C=0: PC=360h<br> If C=1: PC=324h</p>
+<p><span class="red">LCALL addr16</span> - Long subroutine call</p>
+<p><span style="background: #87cefa; border: 1px solid #DDD; padding-left: 5px; padding-right: 5px;"> <b>addr16</b>: Subroutine Address </span></p>
+<p><b>Description:</b> This instruction unconditionally calls a subroutine located at the specified address. The current address and the start of the subroutine called can be located anywhere within the memory space of 64K.</p>
+<p><b>Syntax</b>: LCALL [subroutine name];<br> <b>Bytes</b>: 3 (instruction code, address (15-8), address (7-0));<br> <b>STATUS register flags:</b> No flags are affected;</p>
+<p><b>EXAMPLE:</b></p>
+<img title="LCALL adr16" alt="LCALL adr16" src="./Chapter 3 : The 8051 Instruction Set_files/49.gif">
+<p>Before execution: PC=0123h<br> After execution: PC=1234h</p>
+<p><span class="red">JZ rel</span> - Jump if accumulator is zero</p>
+<p><span style="background: #87cefa; border: 1px solid #DDD; padding-left: 5px; padding-right: 5px;"> <b>addr</b>: Jump Address </span></p>
+<p><b>Description</b>: The instruction checks whether the value stored in the accumulator is 0. If yes,  	a jump to the specified address will be executed. Otherwise, the program proceeds     with the following instruction. This is a short jump instruction, which means that the address     of a new location must be relatively near the current one (-129 to     + 127 locations relative to the first following instruction).</p>
+<p><b>Syntax</b>: JZ [jump address];<br> <b>Bytes</b>: 2 (instruction code, jump value);<br> <b>STATUS register flags:</b> No flags are affected;</p>
+<p><b>EXAMPLE:</b></p>
+<img title="JZ [jump address]" alt="JZ [jump address]" src="./Chapter 3 : The 8051 Instruction Set_files/50.gif">
+<p>Before execution: PC=0323h<br> After execution: If A0: PC=324h<br> If A=0: PC=283h</p>
+<p><span class="red">MOV A,Rn</span> - Moves the Rn register to the accumulator</p>
+<p><span style="background: #87cefa; border: 1px solid #DDD; padding-left: 5px; padding-right: 5px;"> <b>Rn</b>: any R register (R0-R7)<br> &nbsp;<b>A</b>: accumulator </span></p>
+<p><b>Description:</b> The instruction moves the Rn register to the accumulator. The Rn register is not affected.</p>
+<p><b>Syntax</b>: MOV A,Rn;<br> <b>Byte</b>: 1 (instruction code);<br> <b>STATUS register flags:</b> No flags are affected;</p>
+<p><b>EXAMPLE:</b></p>
+<img title="MOV A,Rn" alt="MOV A,Rn" src="./Chapter 3 : The 8051 Instruction Set_files/51.gif">
+<p>Before execution: R3=58h<br> After execution: R3=58h A=58h</p>
+<p><span class="red">LJMP addr16</span> - Long jump</p>
+<p><span style="background: #87cefa; border: 1px solid #DDD; padding-left: 5px; padding-right: 5px;"> <b>addr16</b>: jump address </span></p>
+<p><b>Description:</b> Instruction causes a jump to the specified 16-bit address.</p>
+<p><b>Syntax</b>: LJMP [jump address];<br> <b>Bytes</b>: 3 (instruction code, address (15-8), address (7-0));<br> <b>STATUS register flags:</b> No flags are affected;</p>
+<p><b>EXAMPLE:</b></p>
+<img title="LJMP adr16" alt="LJMP adr16" src="./Chapter 3 : The 8051 Instruction Set_files/52.gif">
+<p>Before execution: PC=0123h<br> After execution: PC=1234h</p>
+<p><span class="red">MOV A,@Ri</span> - Moves the indirect RAM to the accumulator</p>
+<p><span style="background: #87cefa; border: 1px solid #DDD; padding-left: 5px; padding-right: 5px;"> <b>Ri</b>: Register R0 or R1<br> &nbsp;<b>A</b>: accumulator </span></p>
+<p><b>Description:</b> Instruction moves the indirectly addressed register of RAM to the accumulator. The register     address is stored in the Ri register (R0 or R1). The result is stored in the accumulator. The register is not affected.</p>
+<p><b>Syntax</b>: MOV A,@Ri;<br> <b>Byte</b>: 1 (instruction code);<br> <b>STATUS register flags:</b> No flags are affected;</p>
+<p><b>EXAMPLE:</b></p>
+<img title="MOV A,@Ri" alt="MOV A,@Ri" src="./Chapter 3 : The 8051 Instruction Set_files/53.gif">
+<p>Register Address SUM=F2h R0=F2h<br> Before execution: SUM=58h<br> After execution: A=58h SUM=58h</p>
+<p><span class="red">MOV A,direct</span> - Moves the direct byte to the accumulator</p>
+<p><span style="background: #87cefa; border: 1px solid #DDD; padding-left: 5px; padding-right: 5px;"> <b>Direct</b>: arbitrary register with address 0-255 (0-FFh)<br> &nbsp;<b>A</b>: accumulator </span></p>
+<p><b>Description:</b> Instruction moves the direct byte to the accumulator. As it is     direct addressing, the register can be any SFRs or general-purpose register with address     0-7Fh. (0-127 dec.). After executing the instruction, the register is not affected.</p>
+<p><b>Syntax</b>: MOV A,direct;<br> <b>Byte</b>: 2 (instruction code, direct byte address);<br> <b>STATUS register flags:</b> No flags are affected;</p>
+<p><b>EXAMPLE:</b></p>
+<img title="MOV A,Rx" alt="MOV A,Rx" src="./Chapter 3 : The 8051 Instruction Set_files/54.gif">
+<p>Before execution: Rx=68h<br> After execution: Rx=68h A=68h</p>
+<p><span class="red">MOV Rn,A</span> - Moves the accumulator to the Rn register</p>
+<p><span style="background: #87cefa; border: 1px solid #DDD; padding-left: 5px; padding-right: 5px;"> <b>Rn</b>: any R register (R0-R7)<br> &nbsp;<b>A</b>: accumulator </span></p>
+<p><b>Desription</b>: Instruction moves the accumulator to the Rn register. The accumulator is not affected.</p>
+<p><b>Syntax</b>: MOV Rn,A;<br> <b>Byte</b>: 1 (instruction code);<br> <b>STATUS register flags:</b> No flags are affected;</p>
+<p><b>EXAMPLE:</b></p>
+<img title="MOV Rn,A" alt="MOV Rn,A" src="./Chapter 3 : The 8051 Instruction Set_files/55.gif">
+<p>Before execution: A=58h<br> After execution: R3=58h A=58h</p>
+<p><span class="red">MOV A,#data</span> - Moves the immediate data to the accumulator</p>
+<p><span style="background: #87cefa; border: 1px solid #DDD; padding-left: 5px; padding-right: 5px;"> <b>A</b>: accumulator<br> &nbsp;<b>Data</b>: Constant in the range of 0-255 (0-FFh) </span></p>
+<p><b>Desription</b>: Instruction moves the immediate data to the accumulator.</p>
+<p><b>Syntax</b>: MOV A,#data;<br> <b>Bytes</b>: 2 (instruction code, data);<br> <b>STATUS register flags:</b> No flags are affected;</p>
+<p><b>EXAMPLE:</b></p>
+<img title="MOV A,#X" alt="MOV A,#X" src="./Chapter 3 : The 8051 Instruction Set_files/56.gif">
+<p>After execution: A=28h</p>
+<p><span class="red">MOV Rn,#data</span> - Moves the immediate data to the Rn register</p>
+<p><span style="background: #87cefa; border: 1px solid #DDD; padding-left: 5px; padding-right: 5px;"> <b>Rn</b>: any R register (R0-R7)         <b>Data</b>: Constant in the range of 0-255 (0-FFh) </span></p>
+<p><b>Description:</b> Instruction moves the immediate data to the Rn register.</p>
+<p><b>Syntax</b>: MOV Rn,#data;<br> <b>Bytes</b>: 2 (instruction code, data);<br> <b>STATUS register flags:</b> No flags are affected;</p>
+<p><b>EXAMPLE:</b></p>
+<img title="MOV Rn,#X" alt="MOV Rn,#X" src="./Chapter 3 : The 8051 Instruction Set_files/57.gif">
+<p>After execution: R5=32h</p>
+<p><span class="red">MOV Rn,direct</span> - Moves the direct byte to the Rn register</p>
+<p><span style="background: #87cefa; border: 1px solid #DDD; padding-left: 5px; padding-right: 5px;"> <b>Rn</b>: Any R registar (R0-R7)<br> &nbsp;<b>Direct</b>: arbitrary register with address 0-255 (0-FFh) </span></p>
+<p><b>Description</b>: Instruction moves the direct byte to the Rn register. As it is direct     addressing, the register can be any SFRs or general-purpose register with address     0-7Fh. (0-127 dec.). After executing the instruction, the register is not affected.</p>
+<p><b>Syntax</b>: MOV Rn,direct;<br> <b>Bytes</b>: 2 (instruction code, direct);<br> <b>STATUS register flags:</b> No flags are affected;</p>
+<p><b>EXAMPLE:</b></p>
+<img title="MOV Rn,Rx" alt="MOV Rn,Rx" src="./Chapter 3 : The 8051 Instruction Set_files/58.gif">
+<p>Before execution: SUM=58h<br> After execution: SUM=58h R3=58h</p>
+<p><span class="red">MOV direct,Rn</span> - Moves the Rn register to the direct byte</p>
+<p><span style="background: #87cefa; border: 1px solid #DDD; padding-left: 5px; padding-right: 5px;"> <b>Rn</b>: any R register (R0-R7)<br> &nbsp;<b>Direct</b>: arbitrary register with address 0-255 (0 - FFh) </span></p>
+<p><b>Description:</b> Instruction moves the Rn register to the direct byte. As it is direct     addressing, the register can be any SFRs or general-purpose register with address     0-7Fh. (0-127 dec.). After executing the instruction, the register is not affected.</p>
+<p><b>Syntax</b>: MOV direct,Rn;<br> <b>Bytes</b>: 2 (instruction code, direct byte address);<br> <b>STATUS register flags:</b> No flags are affected;</p>
+<p><b>EXAMPLE:</b></p>
+<img title="MOV Rx,Rn" alt="MOV Rx,Rn" src="./Chapter 3 : The 8051 Instruction Set_files/59.gif">
+<p>Before execution: R3=18h<br> After execution: R3=18h CIF=18h</p>
+<p><span class="red">MOV direct,A</span> - Moves the accumulator to the direct byte</p>
+<p><span style="background: #87cefa; border: 1px solid #DDD; padding-left: 5px; padding-right: 5px;"> <b>Direct</b>: arbitrary register with address 0-255 (0 - FFh)<br> &nbsp;<b>A</b>: accumulator </span></p>
+<p><b>Description:</b> Instruction moves the accumulator to the direct byte. As it is direct     addressing, the register can be any SFRs or general-purpose register with address 0-7Fh.     (0-127 dec.). After executing the instruction, the register is not affected.</p>
+<p><b>Syntax</b>: MOV direct,A;<br> <b>Bytes</b>: 2 (instruction code, direct byte address);<br> <b>STATUS register flags:</b> No flags are affected;</p>
+<p><b>EXAMPLE:</b></p>
+<img title="MOV Rx,A" alt="MOV Rx,A" src="./Chapter 3 : The 8051 Instruction Set_files/60.gif">
+<p>Before execution: A=98h<br> After execution: A=98h REG=98h</p>
+<p><span class="red">MOV direct,@Ri</span> - Moves the indirect RAM to the direct byte</p>
+<p><span style="background: #87cefa; border: 1px solid #DDD; padding-left: 5px; padding-right: 5px;"> <b>Direct</b>: arbitrary register with address 0-255 (0 - FFh)<br> &nbsp;<b>Ri</b>: Register R0 or R1 </span></p>
+<p><b>Description</b>: Instruction moves the indirectly adressed register of RAM to the direct byte. The register is not affected.</p>
+<p><b>Syntax</b>: MOV direct,@Ri;<br> <b>Bytes</b>: 2 (instruction code, direct byte address);<br> <b>STATUS register flags:</b> No flags are affected;</p>
+<p><b>EXAMPLE:</b></p>
+<img title="MOV Rx,@Ri" alt="MOV Rx,@Ri" src="./Chapter 3 : The 8051 Instruction Set_files/61.gif">
+<p>Register Address SUM=F3<br> Before execution: SUM=58h R1=F3<br> After execution: SUM=58h TEMP=58h</p>
+<p><span class="red">MOV direct1,direct2</span> - Moves the direct byte to the direct byte</p>
+<p><span style="background: #87cefa; border: 1px solid #DDD; padding-left: 5px; padding-right: 5px;"> <b>Direct</b>: Arbitrary register with address 0-255 (0-FFh)<br> &nbsp;<b>Direct</b>: Arbitrary register with address 0-255 (0-FFh) </span></p>
+<p><b>Description</b>: Instruction moves the direct byte to another direct byte. As it is direct     addressing, both registers can be any SFRs or general-purpose registers with address     0-7Fh. (0-127 dec.). The direct1 is not affected.</p>
+<p><b>Syntax</b>: MOV direct1,direct2;<br> <b>Bytes</b>: 3 (instruction code, direct1 address, direct2 address);<br> <b>STATUS register flags:</b> No flags are affected.</p>
+<p><b>EXAMPLE:</b></p>
+<img title="MOV Rx,Ry" alt="MOV Rx,Ry" src="./Chapter 3 : The 8051 Instruction Set_files/62.gif">
+<p>Before execution: TEMP=58h<br> After execution: TEMP=58h SUM=58h</p>
+<p><span class="red">MOV @Ri,A</span> - Moves the accumulator to the indirect RAM</p>
+<p><span style="background: #87cefa; border: 1px solid #DDD; padding-left: 5px; padding-right: 5px;"> <b>A</b>: accumulator<br> &nbsp;<b>Ri</b>: register R0 or R1 </span></p>
+<p><b>Description:</b> Instruction moves the accumulator to the indirectly addressed register of RAM. The register     address is stored in the Ri register (R0 or R1). After executing the instruction, the accumulator     is not affected.</p>
+<p><b>Syntax</b>: MOV @Ri,A;<br> <b>Byte</b>: 1 (instruction code);<br> <b>STATUS register flags:</b> No flags are affected;</p>
+<p><b>EXAMPLE:</b></p>
+<img title="MOV @Ri,A" alt="MOV @Ri,A" src="./Chapter 3 : The 8051 Instruction Set_files/63.gif">
+<p>Register Address SUM=F2h<br> Before execution: R0=F2h A=58h<br> After execution: SUM=58h A=58h</p>
+<p><span class="red">MOV direct,#data</span> - Moves the immediate data to the direct byte</p>
+<p><span style="background: #87cefa; border: 1px solid #DDD; padding-left: 5px; padding-right: 5px;"> <b>Direct</b>: Arbitrary register with address 0-255 (0-FFh)<br> &nbsp;<b>Data</b>: Constant in the range of 0-255 (0-FFh) </span></p>
+<p><b>Description:</b> Instruction moves the immediate data to the direct byte. As it is direct     addressing, the direct byte can be any SFRs or general-purpose register with address 0-7Fh.     (0-127 dec.).</p>
+<p><b>Syntax</b>: MOV direct,#data;<br> <b>Bytes</b>: 3 (instruction code, direct byte address, data);<br> <b>STATUS register flags:</b> No flags are affected;</p>
+<p><b>EXAMPLE:</b></p>
+<img title="MOV Rx,#X" alt="MOV Rx,#X" src="./Chapter 3 : The 8051 Instruction Set_files/64.gif">
+<p>After execution: TEMP=22h</p>
+<p><span class="red">MOV @Ri,#data</span> - Moves the immediate data to the indirect RAM</p>
+<p><span style="background: #87cefa; border: 1px solid #DDD; padding-left: 5px; padding-right: 5px;"> <b>Ri</b>: Register R0 or R1<br> &nbsp;<b>Data</b>: Constant in the range of 0-255 (0-FFh) </span></p>
+<p><b>Description:</b> Instruction moves the immediate data to the idirectly addressed register of RAM.      The register address is stored in the Ri register (R0 or R1).</p>
+<p><b>Syntax</b>: MOV @Ri,#data;<br> <b>Bytes</b>: 2 (instruction code, data);<br> <b>STATUS register flags:</b> No flags are affected;</p>
+<p><b>EXAMPLE:</b></p>
+<img title="MOV @Ri,#X" alt="MOV @Ri,#X" src="./Chapter 3 : The 8051 Instruction Set_files/65.gif">
+<p>Register address TEMP=E2h<br> Before execution: R1=E2h<br> After execution: TEMP=44h</p>
+<p><span class="red">MOV @Ri,direct</span> - Moves the direct byte to the indirect RAM</p>
+<p><span style="background: #87cefa; border: 1px solid #DDD; padding-left: 5px; padding-right: 5px;"> <b>Direct</b>: Arbitrary register with address 0-255 (0-FFh)<br> &nbsp;<b>Ri</b>: Register R0 or R1 </span></p>
+<p><b>Description:</b> Instruction moves the direct byte to a register the address of which     is stored in the Ri register (R0 or R1). After executing the instruction, the direct byte     is not affected.</p>
+<p><b>Syntax</b>: MOV @Ri,direct;<br> <b>Bytes</b>: 2 (instruction code, direct byte address);<br> <b>STATUS register flags:</b> No flags are affected;</p>
+<p><b>EXAMPLE:</b></p>
+<img title="MOV @Ri,Rx" alt="MOV @Ri,Rx" src="./Chapter 3 : The 8051 Instruction Set_files/66.gif">
+<p>Register address TEMP=E2h<br> Before execution: SUM=58h R1=E2h<br> After execution: SUM=58h TEMP=58h</p>
+<p><span class="red">MOV bit,C</span> - Moves the carry flag to the direct bit</p>
+<p><span style="background: #87cefa; border: 1px solid #DDD; padding-left: 5px; padding-right: 5px;"> <b>C</b>: Carry flag<br> &nbsp;<b>Bit</b>: any bit of RAM </span></p>
+<p><b>Description:</b> Instruction moves the carry flag to the direct bit.     After executing the instruction, the carry flag is not affected.</p>
+<p><b>Syntax</b>: MOV bit,C;<br> <b>Bytes</b>: 2 (instruction code, bit address);<br> <b>STATUS register flags:</b> No flags are affected;</p>
+<p><b>EXAMPLE:</b></p>
+<img title="MOV bit,C" alt="MOV bit,C" src="./Chapter 3 : The 8051 Instruction Set_files/67.gif">
+<p>After execution: If C=0 P1.2=0<br> If C=1 P1.2=1</p>
+<p><span class="red">MOV C,bit</span> - Moves the direct bit to the carry flag</p>
+<p><span style="background: #87cefa; border: 1px solid #DDD; padding-left: 5px; padding-right: 5px;"> <b>C</b>: Carry flag<br> &nbsp;<b>Bit</b>: any bit of RAM </span></p>
+<p><b>Description:</b> Instruction moves the direct bit to the carry flag. After executing the instruction, the bit is not affected.</p>
+<p><b>Syntax</b>: MOV C,bit;<br> <b>Bytes</b>: 2 (instruction code, bit address);<br> <b>STATUS register flags:</b> C;</p>
+<p><b>EXAMPLE:</b></p>
+<img title="MOV C,bit" alt="MOV C,bit" src="./Chapter 3 : The 8051 Instruction Set_files/68.gif">
+<p>After execution: If P1.4=0 C=0<br> If P1.4=1 C=1</p>
+<p><span class="red">MOVC A,@A+DPTR</span> - Moves the code byte relative to the DPTR to the accumulator</p>
+<p><span style="background: #87cefa; border: 1px solid #DDD; padding-left: 5px; padding-right: 5px;"> <b>A</b>: accumulator<br> &nbsp;<b>DPTR</b>: Data Pointer </span></p>
+<p><b>Description</b>: Instruction first adds the 16-bit DPTR register to the accumulator.        The result of addition is then used as a memory address        from which the 8-bit data is moved to the accumulator.</p>
+<p><b>Syntax</b>: MOVC A,@A+DPTR;<br> <b>Byte</b>: 1 (instruction code);<br> <b>STATUS register flags:</b> No flags affected;</p>
+<p><b>EXAMPLE:</b></p>
+<img title="MOVC A,@A+DPTR" alt="MOVC A,@A+DPTR" src="./Chapter 3 : The 8051 Instruction Set_files/69.gif">
+<p>Before execution:<br> DPTR=1000:<br> A=0 <br> A=1 <br> A=2 <br> A=3</p>
+<p>After execution:<br> A=66h<br> A=77h<br> A=88h<br> A=99h</p>
+<p><b>Note:</b> DB (Define Byte) is a directive in assembly language used to define constant.</p>
+<p><span class="red">MOV DPTR,#data16</span> - Loads the data pointer with a 16-bit constant</p>
+<p><span style="background: #87cefa; border: 1px solid #DDD; padding-left: 5px; padding-right: 5px;"> <b>Data</b>: constant in the range of 0-65535 (0-FFFFh)<br> &nbsp;<b>DPTR</b>: Data Pointer </span></p>
+<p><b>Description:</b> Instruction stores a 16-bit constant to the DPTR register. The 8     high bits of the constant are stored in the DPH register, while the 8 low bits     are stored in the DPL register.</p>
+<p><b>Syntax</b>: MOV DPTR,#data;<br> <b>Bytes</b>: 3 (instruction code, constant (15-8), constant (7-0));<br> <b>STATUS register flags:</b> No flags affected;</p>
+<p><b>EXAMPLE:</b></p>
+<img title="MOV DPTR,#X16" alt="MOV DPTR,#X16" src="./Chapter 3 : The 8051 Instruction Set_files/70.gif">
+<p>After execution: DPH=12h DPL=34h</p>
+<p><span class="red">MOVX A,@Ri</span> - Moves the external RAM (8-bit address) to the accumulator</p>
+<p><span style="background: #87cefa; border: 1px solid #DDD; padding-left: 5px; padding-right: 5px;"> <b>Ri</b>: register R0 or R1<br> &nbsp;<b>A</b>: accumulator </span></p>
+<p><b>Description:</b> Instruction reads the content of a register in external RAM     and moves it to the accumulator. The register address is stored in the Ri register (R0     or R1).</p>
+<p><b>Syntax</b>: MOVX A,@Ri;<br> <b>Byte</b>: 1 (instruction code);<br> <b>STATUS register flags:</b> No flags affected;</p>
+<p><b>EXAMPLE:</b></p>
+<img title="MOVX A,@Ri" alt="MOVX A,@Ri" src="./Chapter 3 : The 8051 Instruction Set_files/71.gif">
+<p>Register Address: SUM=12h<br> Before execution: SUM=58h R0=12h<br> After execution: A=58h</p>
+<p><b>Note:</b><br> SUM Register is stored in external RAM which is 256 bytes in size.</p>
+<p><span class="red">MOVC A,@A+PC</span> - Moves the code byte relative to the PC to the accumulator</p>
+<p><span style="background: #87cefa; border: 1px solid #DDD; padding-left: 5px; padding-right: 5px;"> <b>A</b>: accumulator<br> &nbsp;<b>PC</b>: Program Counter </span></p>
+<p><b>Description:</b> Instruction first adds the 16-bit PC register to the accumulator (the current program address is stored in the PC register). The result of addition is then used as a memory address from which the 8-bit data is moved to the accumulator.</p>
+<p><b>Syntax</b>: MOVC A,@A+PC;<br> <b>Byte</b>: 1 (instruction code);<br> <b>STATUS register flags:</b> No flags affected;</p>
+<p><b>EXAMPLE:</b></p>
+<img title="MOVC A,@A+PC" alt="MOVC A,@A+PC" src="./Chapter 3 : The 8051 Instruction Set_files/72.gif">
+<p>After the subroutine "Table" has been executed, one of four values is stored in the accumulator:</p>
+<p>Before execution:<br> A=0<br> A=1<br> A=2<br> A=3</p>
+<p>After execution:<br> A=66h<br> A=77h<br> A=88h<br> A=99h</p>
+<p><b>Note:</b> DB (Define Byte) is a directive in assembly language used to define constant.</p>
+<p><span class="red">MOVX @Ri,A</span> - Moves the accumulator to the external RAM (8-bit address)</p>
+<p><span style="background: #87cefa; border: 1px solid #DDD; padding-left: 5px; padding-right: 5px;"> <b>Ri:</b> register R0 or R1<br> &nbsp;<b>A</b>: accumulator </span></p>
+<p><b>Description:</b> Instruction moves the accumulator to a register stored in external RAM. Its address is stored in the Ri     register.</p>
+<p><b>Syntax</b>: MOVX @Ri,A;<br> <b>Byte</b>: 1 (instruction code);<br> <b>STATUS register flags:</b> No flags affected;</p>
+<p><b>EXAMPLE:</b></p>
+<img title="MOVX @Ri,A" alt="MOVX @Ri,A" src="./Chapter 3 : The 8051 Instruction Set_files/73.gif">
+<p>Register address: SUM=34h<br> Before execution: A=58 R1=34h<br> After execution: SUM=58h</p>
+<p><b>NOTE:</b><br> Register SUM is located in external RAM which is 256 bytes in size.</p>
+<p><span class="red">MOVX A,@DPTR</span> - Moves the external memory (16-bit address) to the accumulator</p>
+<p><span style="background: #87cefa; border: 1px solid #DDD; padding-left: 5px; padding-right: 5px;"> <b>A</b>: accumulator<br> &nbsp;<b>DPRTR</b>: Data Pointer </span></p>
+<p><b>Description:</b> Instruction moves the content of a register in external memory     to the accumulator. The 16-bit address of the register is stored in the     DPTR register (DPH and DPL).</p>
+<p><b>Syntax</b>: MOVX A,@DPTR;<br> <b>Byte</b>: 1 (instruction code);<br> <b>STATUS register flags:</b> No flags affected;</p>
+<p><b>EXAMPLE:</b></p>
+<img title="MOVX A,@DPTR" alt="MOVX A,@DPTR" src="./Chapter 3 : The 8051 Instruction Set_files/74.gif">
+<p>Register address: SUM=1234h<br> Before execution: DPTR=1234h SUM=58<br> After execution: A=58h</p>
+<p><b>Note:</b><br> Register SUM is located in external RAM which is up to 64K in size.</p>
+<p><span class="red">MUL AB</span> - Multiplies A and B</p>
+<p><span style="background: #87cefa; border: 1px solid #DDD; padding-left: 5px; padding-right: 5px;"> <b>A</b>: accumulator<br> &nbsp;<b>B</b>: Register B </span></p>
+<p><b>Description:</b> Instruction multiplies the value in the accumulator with the value     in the B register. The low-order byte of the 16-bit result is stored in the accumulator,     while the high byte remains in the B register. If the result is larger than 255, the overflow     flag is set. The carry flag is not affected.</p>
+<p><b>Syntax</b>: MUL AB;<br> <b>Byte</b>: 1 (instruction code);<br> <b>STATUS register flags:</b> No flags affected;</p>
+<p><b>EXAMPLE:</b></p>
+<img title="MUL AB" alt="MUL AB" src="./Chapter 3 : The 8051 Instruction Set_files/75.gif">
+<p>Before execution: A=80 (50h) B=160 (A0h)<br> After execution: A=0 B=32h<br> A·B=80·160=12800 (3200h)</p>
+<p><span class="red">MOVX @DPTR,A</span> - Moves the accumulator to the external RAM (16-bit address)</p>
+<p><span style="background: #87cefa; border: 1px solid #DDD; padding-left: 5px; padding-right: 5px;"> <b>A</b>: accumulator<br> &nbsp;<b>DPTR</b>: Data Pointer </span></p>
+<p><b>Description:</b> Instruction moves the accumulator to a register stored in external RAM. The 16-bit address of the register is stored     in the DPTR register (DPH and DPL).</p>
+<p><b>Syntax</b>: MOVX @DPTR,A;<br> <b>Byte</b>: 1 (instruction code);<br> <b>STATUS register flags:</b> No flags affected;</p>
+<p><b>EXAMPLE:</b></p>
+<img title="MOVX @DPTR,A" alt="MOVX @DPTR,A" src="./Chapter 3 : The 8051 Instruction Set_files/76.gif">
+<p>Register address: SUM=1234h<br> Before execution: A=58 DPTR=1234h<br> After execution: SUM=58h</p>
+<p><b>Note:</b><br> Register SUM is located in RAM which is up to 64K in size.</p>
+<p><span class="red">ORL A,Rn</span> - OR register to the accumulator</p>
+<p><span style="background: #87cefa; border: 1px solid #DDD; padding-left: 5px; padding-right: 5px;"> <b>Rn</b>: any R register (R0-R7)<br> &nbsp;<b>A</b>: accumulator </span></p>
+<p><b>Description:</b> Instruction performs logic OR operation between the accumulator     and Rn register. The result is stored in the accumulator.</p>
+<p><b>Syntax</b>: ORL A,Rn;<br> <b>Byte</b>: 1 (instruction code);<br> <b>STATUS register flags:</b> No flags affected;</p>
+<p><b>EXAMPLE:</b></p>
+<img title="ORL A,Rn" alt="ORL A,Rn" src="./Chapter 3 : The 8051 Instruction Set_files/77.gif">
+<p>Before execution: A= C3h (11000011 Bin.)<br> R5= 55h (01010101 Bin.)<br> After execution: A= D7h (11010111 Bin.)</p>
+<p><span class="red">NOP</span> - No operation</p>
+<p><b>Description:</b> Instruction doesn’t perform any operation and is used when additional time delays are needed.</p>
+<p><b>Syntax</b>: NOP;<br> <b>Byte</b>: 1 (instruction code);<br> <b>STATUS register flags:</b> No flags affected;</p>
+<p><b>EXAMPLE:</b></p>
+<img title="NOP" alt="NOP" src="./Chapter 3 : The 8051 Instruction Set_files/78.gif">
+<p>Such a sequence provides a negative pulse which lasts exactly 5 machine cycles on the P2.3. If a 12 MHz quartz crystal is used then 1 cycle lasts 1uS, which means that this output will be a low-going output pulse for 5 uS.</p>
+<p><span class="red">ORL A,@Ri</span> - OR indirect RAM to the accumulator</p>
+<p><span style="background: #87cefa; border: 1px solid #DDD; padding-left: 5px; padding-right: 5px;"> <b>Ri</b>: register R0 or R1<br> &nbsp;<b>A</b>: accumulator </span></p>
+<p><b>Description:</b> Instruction performs logic OR operation between the accumulator     and a register. As it is indirect addressing, the register address is stored in the Ri     register (R0 or R1). The result is stored in the accumulator.</p>
+<p><b>Syntax</b>: ANL A,@Ri;<br> <b>Byte</b>: 1 (instruction code);<br> <b>STATUS register flags:</b> No flags affected;</p>
+<p><b>EXAMPLE:</b></p>
+<img title="ANL A,@Ri" alt="ANL A,@Ri" src="./Chapter 3 : The 8051 Instruction Set_files/79.gif">
+<p>Register address: TEMP=FAh<br> Before execution: R1=FAh<br> TEMP= C2h (11000010 Bin.)<br> A= 54h (01010100 Bin.)<br> After execution: A= D6h (11010110 Bin.)</p>
+<p><span class="red">ORL A,direct</span> - OR direct byte to the accumulator</p>
+<p><span style="background: #87cefa; border: 1px solid #DDD; padding-left: 5px; padding-right: 5px;"> <b>Direct</b>: arbitrary register with address 0-255 (0-FFh)<br> &nbsp;<b>A</b>: accumulator </span></p>
+<p><b>Description:</b> Instruction performs logic OR operation between the accumulator     and a register. As it is direct addressing, the register can be any SFRs or general-purpose     register with address 0-7Fh (0-127 dec.). The result is     stored in the accumulator.</p>
+<p><b>Syntax</b>: ORL A,direct;<br> <b>Bytes</b>: 2 (instruction code, direct byte address);<br> <b>STATUS register flags:</b> No flags affected;</p>
+<p><b>EXAMPLE:</b></p>
+<img title="ORL A,Rx" alt="ORL A,Rx" src="./Chapter 3 : The 8051 Instruction Set_files/80.gif">
+<p>Before execution: A= C2h (11000010 Bin.)<br> LOG= 54h (01010100 Bin.)<br> After execution: A= D6h (11010110 Bin.)</p>
+<p><span class="red">ORL direct,A</span> - OR accumulator to the direct byte</p>
+<p><span style="background: #87cefa; border: 1px solid #DDD; padding-left: 5px; padding-right: 5px;"> <b>Direct</b>: arbitrary register with address 0-255 (0-FFh)<br> &nbsp;<b>A</b>: accumulator </span></p>
+<p><b>Description</b>: Instruction performs logic OR operation between a register and accumulator. As it is direct addressing, the register can be any SFRs or general- purpose register with address 0-7Fh (0-127 dec.). The result is stored in the register.</p>
+<p><b>Syntax</b>: ORL [register address], A;<br> <b>Bytes</b>: 2 (instruction code, direct byte address);<br> <b>STATUS register flags:</b> No flags affected;</p>
+<p><b>EXAMPLE:</b></p>
+<img title="ORL Rx,A" alt="ORL Rx,A" src="./Chapter 3 : The 8051 Instruction Set_files/81.gif">
+<p>Before execution: TEMP= C2h (11000010 Bin.)<br> A= 54h (01010100 Bin.)<br> After execution: A= D6h (11010110 Bin.)</p>
+<p><span class="red">ORL A,#data</span> - OR immediate data to the accumulator</p>
+<p><span style="background: #87cefa; border: 1px solid #DDD; padding-left: 5px; padding-right: 5px;"> <b>Data</b>: constant in the range of 0-255 (0-FFh)<br> &nbsp;<b>A</b>: accumulator </span></p>
+<p><b>Description:</b> Instruction performs logic OR operation between the accumulator     and the immediate data. The result is stored in the accumulator.</p>
+<p><b>Syntax</b>: ORL A, #data;<br> <b>Bytes</b>: 2 (instruction code, data);<br> <b>STATUS register flags:</b> No flags affected;</p>
+<p><b>EXAMPLE:</b></p>
+<img title="ORL A, #X" alt="ORL A, #X" src="./Chapter 3 : The 8051 Instruction Set_files/82.gif">
+<p>Before execution: A= C2h (11000010 Bin.)<br> After execution: A= C3h (11000011 Bin.)</p>
+<p><span class="red">ORL C,bit</span> - OR direct bit to the carry flag</p>
+<p><span style="background: #87cefa; border: 1px solid #DDD; padding-left: 5px; padding-right: 5px;"> <b>C</b>: Carry flag<br> &nbsp;<b>Bit</b>: any bit of RAM </span></p>
+<p><b>Description:</b> Instruction performs logic OR operation     between the direct bit and the carry flag. The result is stored in the carry flag.</p>
+<p><b>Syntax</b>: ORL C,bit;<br> <b>Bytes</b>: 2 (instruction code, direct bit address);<br> <b>STATUS register flags:</b> No flags affected;</p>
+<p><b>EXAMPLE:</b></p>
+<img title="ORL C,bit" alt="ORL C,bit" src="./Chapter 3 : The 8051 Instruction Set_files/83.gif">
+<p>Before execution: ACC= C6h (11001010 Bin.)<br> C=0<br> After execution: C=1</p>
+<p><span class="red">ORL direct,#data</span> - OR immediate data to direct byte</p>
+<p><span style="background: #87cefa; border: 1px solid #DDD; padding-left: 5px; padding-right: 5px;"> <b>Direct</b>: arbitrary register with address 0-255 (0-FFh)<br> &nbsp;<b>Data</b>: constant in the range of 0-255 (0-FFh) </span></p>
+<p><b>Description:</b> Instruction performs logic OR operation between the immediate data     and the direct byte. As it is direct addressing, the direct byte can be any SFRs or general-purpose     register with address 0-7Fh (0-127 dec.). The result is stored in     the direct byte.</p>
+<p><b>Syntax</b>: ORL [register address],#data;<br> <b>Bytes</b>: 3 (instruction code, direct byte address, data);<br> <b>STATUS register flags:</b> No flags affected;</p>
+<p><b>EXAMPLE:</b></p>
+<img title="ORL Rx,#X" alt="ORL Rx,#X" src="./Chapter 3 : The 8051 Instruction Set_files/84.gif">
+<p>Before execution: TEMP= C2h (11000010 Bin.)<br> After execution: A= D2h (11010010 Bin.)</p>
+<p><span class="red">POP direct</span> - Pop the direct byte from the stack</p>
+<p><span style="background: #87cefa; border: 1px solid #DDD; padding-left: 5px; padding-right: 5px;"> <b>Direct</b>: arbitrary register with address 0-255 (0-FFh) </span></p>
+<p><b>Description:</b> Instruction first reads data from the location being pointed to by the Stack. The data is then copied to the direct byte and the value of     the Stack Pointer is decremented by 1. As it is direct addressing, the direct byte can be any     SFRs or general-purpose register with address 0-7Fh. (0-127 dec.).</p>
+<p><b>Syntax</b>: POP direct;<br> <b>Bytes</b>: 2 (instruction code, direct byte address);<br> <b>STATUS register flags:</b> No flags affected;</p>
+<p><b>EXAMPLE:</b></p>
+<img title="POP Rx" alt="POP Rx" src="./Chapter 3 : The 8051 Instruction Set_files/85.gif">
+<p>Before execution: Address  Value <br> 030h 	  20h<br> 031h     23h<br> SP==&gt; 032h 01h<br> DPTR=0123h (DPH=01, DPL=23h)</p>
+<p>After execution: Address  Value<br> SP==&gt; 030h 20h<br> 031h     23h<br> 032h     01h</p>
+<p><span class="red">ORL C,/bit</span> - OR complements of direct bit to the carry flag</p>
+<p><span style="background: #87cefa; border: 1px solid #DDD; padding-left: 5px; padding-right: 5px;"> <b>C</b>: carry flag<br> &nbsp;<b>Bit</b>: any bit of RAM </span></p>
+<p>Description: Instruction performs logic OR operation between the addressed inverted bit and the carry flag. The result is stored in the carry flag.</p>
+<table class="def_table">
+<tbody>
+<tr>
+<th><b>bit</b></th>
+<th><b>bit</b></th>
+<th><b>C</b></th>
+<th><b>C AND <span style="text-decoration: overline;">bit</span></b></th>
+</tr>
+<tr>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+<p><b>Syntax</b>: ORL C,/bit;<br> <b>Bytes</b>: 2 (instruction code, bit address);<br> <b>STATUS register flags:</b> No flags affected;</p>
+<p><b>EXAMPLE:</b></p>
+<img title="ORL C,/bit" alt="ORL C,/bit" src="./Chapter 3 : The 8051 Instruction Set_files/86.gif">
+<p>Before execution: ACC= C6h (11001010 Bin.)<br> C=0<br> After execution: C=0</p>
+<p><span class="red">RET</span> - Return from subroutine</p>
+<p>Description: This instruction ends every subroutine. After execution, the program     proceeds with the instruction following an ACALL or LCALL.</p>
+<p><b>Syntax</b>: RET;<br> <b>Byte</b>: 1 (instruction code);<br> <b>STATUS register flags:</b> No flags affected;</p>
+<p><b>EXAMPLE:</b></p>
+<img title="RET" alt="RET" src="./Chapter 3 : The 8051 Instruction Set_files/87.gif">
+<p><span class="red">PUSH direct</span> - Pushes the direct byte onto the stack</p>
+<p><span style="background: #87cefa; border: 1px solid #DDD; padding-left: 5px; padding-right: 5px;"> <b>Data</b>: Arbitrary register with address 0-255 (0-FFh) </span></p>
+<p><b>Description:</b> Address currently pointed to by the Stack Pointer is first incremented     by 1 and afterwards the data from the register Rx is copied to it. As it is direct     addressing, the direct byte can be any SFRs or general-purpose register with address 0-7Fh.     (0-127 dec.)</p>
+<p><b>Syntax</b>: PUSH direct;<br> <b>Bytes</b>: 2 (instruction code, direct byte address);<br> <b>STATUS register flags:</b> No flags affected;</p>
+<p><b>EXAMPLE:</b></p>
+<img title="PUSH Rx" alt="PUSH Rx" src="./Chapter 3 : The 8051 Instruction Set_files/88.gif">
+<p>Before execution: Address Value<br> SP==&gt; 030h 20h<br> DPTR=0123h (DPH=01, DPL=23h)</p>
+<p>After execution: Address Value<br> 030h 20h<br> 031h 23h<br> SP==&gt; 032h 01h</p>
+<p><span class="red">RL A</span> - Rotates the accumulator one bit left</p>
+<p><span style="background: #87cefa; border: 1px solid #DDD; padding-left: 5px; padding-right: 5px;"> <b>A</b>: accumulator </span></p>
+<p><b>Description:</b> Eight bits in the accumulator are rotated one bit left, so that the     bit 7 is rotated into the bit 0 position.</p>
+<p><b>Syntax</b>: RL A;<br> <b>Byte</b>: 1 (instruction code);<br> <b>STATUS register flags:</b> No flags affected;</p>
+<p><b>EXAMPLE:</b></p>
+<img title="RL A" alt="RL A" src="./Chapter 3 : The 8051 Instruction Set_files/89.gif">
+<p>Before execution: A= C2h (11000010 Bin.)<br> After execution: A=85h (10000101 Bin.)</p>
+<img title="RL A" alt="RL A" src="./Chapter 3 : The 8051 Instruction Set_files/90.gif">
+<p><span class="red">RETI</span> - Return from interrupt</p>
+<p><b>Description:</b> This instruction ends every interrupt routine and informs processor about it. After executing the instruction, the program proceeds from where it left off. The PSW is not automatically returned its pre-interrupt status.</p>
+<p><b>Syntax</b>: RETI;<br> <b>Byte</b>: 1 (instruction code);<br> <b>STATUS register flags:</b> No flags affected;</p>
+<p><span class="red">RR A</span> - Rotates the accumulator one bit right</p>
+<p><span style="background: #87cefa; border: 1px solid #DDD; padding-left: 5px; padding-right: 5px;"> <b>A</b>: accumulator </span></p>
+<p><b>Description:</b> All eight bits in the accumulator are rotated one bit right so that     the bit 0 is rotated into the bit 7 position.</p>
+<p><b>Syntax</b>: RR A;<br> <b>Byte</b>: 1 (instruction code);<br> <b>STATUS register flags:</b> No flags affected;</p>
+<p><b>EXAMPLE:</b></p>
+<img title="RR A" alt="RR A" src="./Chapter 3 : The 8051 Instruction Set_files/91.gif">
+<p>Before execution: A= C2h (11000010 Bin.)<br> After execution: A= 61h (01100001 Bin.)</p>
+<img title="Rotate Right" alt="Rotate Right" src="./Chapter 3 : The 8051 Instruction Set_files/92.gif">
+<p><span class="red">RLC A</span> - Rotates the accumulator one bit left through the carry flag</p>
+<p><span style="background: #87cefa; border: 1px solid #DDD; padding-left: 5px; padding-right: 5px;"> <b>A</b>: accumulator </span></p>
+<p><b>Description:</b> All eight bits in the accumulator and carry flag are rotated one bit     left. After this operation, the bit 7 is rotated into the carry flag position and the carry flag     is rotated into the bit 0 position.</p>
+<p><b>Syntax</b>: RLC A;<br> <b>Byte</b>: 1 (instruction code);<br> <b>STATUS register flags:</b> C;</p>
+<p><b>EXAMPLE:</b></p>
+<img title="RLC A" alt="RLC A" src="./Chapter 3 : The 8051 Instruction Set_files/93.gif">
+<p>Before execution: A= C2h (11000010 Bin.)<br> C=0<br> After execution: A= 85h (10000100 Bin.)<br> C=1</p>
+<img title="Rotate Left Through Carry Bit" alt="Rotate Left Through Carry Bit" src="./Chapter 3 : The 8051 Instruction Set_files/94.gif">
+<p><span class="red">SETB C</span> - Sets the carry flag</p>
+<p><span style="background: #87cefa; border: 1px solid #DDD; padding-left: 5px; padding-right: 5px;"> <b>C</b>: Carry flag </span></p>
+<p><b>Description:</b> Instruction sets the carry flag.</p>
+<p><b>Syntax</b>: SETB C;<br> <b>Byte</b>: 1 (instruction code);<br> <b>STATUS register flags:</b> C;</p>
+<p><b>EXAMPLE:</b></p>
+<img title="SETB C" alt="SETB C" src="./Chapter 3 : The 8051 Instruction Set_files/95.gif">
+<p>After execution: C=1</p>
+<p><span class="red">RRC A</span> - Rotates the accumulator one bit right through the carry flag</p>
+<p><span style="background: #87cefa; border: 1px solid #DDD; padding-left: 5px; padding-right: 5px;"> <b>A</b>: accumulator </span></p>
+<p><b>Description:</b> All eight bits in the accumulator and carry flag are rotated one bit right.     After this operation, the carry flag is rotated into the bit 7 position and the bit 0 is rotated     into the carry flag position.</p>
+<p><b>Syntax</b>: RRC A;<br> <b>Byte</b>: 1 (instruction code);<br> <b>STATUS register flags:</b> C;</p>
+<p><b>EXAMPLE:</b></p>
+<img title="RRC A" alt="RRC A" src="./Chapter 3 : The 8051 Instruction Set_files/96.gif">
+<p>Before execution: A= C2h (11000010 Bin.)<br> C=0<br> After execution: A= 61h (01100001 Bin.)<br> C=0</p>
+<img title="Rotate Right Through Carry Bit" alt="Rotate Right Through Carry Bit" src="./Chapter 3 : The 8051 Instruction Set_files/97.gif">
+<p><span class="red">SJMP rel</span> - Short Jump (relative address)</p>
+<p><span style="background: #87cefa; border: 1px solid #DDD; padding-left: 5px; padding-right: 5px;"> <b>addr</b>: Jump Address </span></p>
+<p><b>Description:</b> Instruction enables jump to the new address which should be in the range of -128     to +127 locations relative to the first following instruction.</p>
+<p><b>Syntax</b>: SJMP [jump address];<br> <b>Bytes</b>: 2 (instruction code, jump value);<br> <b>STATUS register flags:</b> No flags are affected;</p>
+<p><b>EXAMPLE:</b></p>
+<img title="SJMP rel" alt="SJMP rel" src="./Chapter 3 : The 8051 Instruction Set_files/98.gif">
+<p>Before execution: PC=323<br> After execution: PC=345</p>
+<p><span class="red">SETB bit</span> - Sets the direct bit</p>
+<p><span style="background: #87cefa; border: 1px solid #DDD; padding-left: 5px; padding-right: 5px;"> <b>Bit</b>: any bit of RAM </span></p>
+<p><b>Description:</b> Instruction sets the specified bit. The register containing that bit     must belong to the group of the so called bit addressable registers.</p>
+<p><b>Syntax</b>: SETB [bit address];<br> <b>Bytes</b>: 2 (instruction code, bit address);<br> <b>STATUS register flags:</b> No flags affected;</p>
+<p><b>EXAMPLE:</b></p>
+<img title="SETB bit" alt="SETB bit" src="./Chapter 3 : The 8051 Instruction Set_files/99.gif">
+<p>Before execution: P0.1 = 34h (00110100)<br> <i>pin 1 is configured as an output</i><br> After execution: P0.1 = 35h (00110101)<br> <i>pin 1 is configured as an input</i></p>
+<p><span class="red">SUBB A,direct</span> - Subtracts the direct byte from the accumulator with a borrow</p>
+<p><span style="background: #87cefa; border: 1px solid #DDD; padding-left: 5px; padding-right: 5px;"> <b>Direct</b>: arbitrary register with address 0-255 (0-FFh)<br> &nbsp;<b>A</b>: accumulator </span></p>
+<p><b>Description:</b> Instruction subtracts the direct byte from the accumulator with a borrow. If the higher bit is subtracted from the lower bit then     the carry flag is set. As it is direct addressing, the direct byte can be any SFRs or general-purpose     register with address 0-7Fh. (0-127 dec.). The result is stored in the accumulator.</p>
+<p><b>Syntax</b>: SUBB A,direct;<br> <b>Bytes</b>: 2 (instruction code, direct byte address);<br> <b>STATUS register flags:</b> C, OV, AC;</p>
+<p><b>EXAMPLE:</b></p>
+<img title="SUBB A,Rx" alt="SUBB A,Rx" src="./Chapter 3 : The 8051 Instruction Set_files/100.gif">
+<p>Before execution: A=C9h, DIF=53h, C=0<br> After execution: A=76h, C=0</p>
+<p><span class="red">SUBB A,Rn</span> - Subtracts the Rn register from the accumulator with a borrow</p>
+<p><span style="background: #87cefa; border: 1px solid #DDD; padding-left: 5px; padding-right: 5px;"> <b>Rn</b>: any R register (R0-R7)<br> &nbsp;<b>A</b>: accumulator </span></p>
+<p><b>Description</b>: Instruction subtracts the Rn register from the accumulator with a borrow. If the higher bit is subtracted from the lower bit then the     carry flag is set. The result is stored in the accumulator.</p>
+<p><b>Syntax</b>: SUBB A,Rn;<br> <b>Byte</b>: 1 (instruction code);<br> <b>STATUS register flags:</b> C, OV, AC;</p>
+<p><b>EXAMPLE:</b></p>
+<img title="SUBB A,Rn" alt="SUBB A,Rn" src="./Chapter 3 : The 8051 Instruction Set_files/101.gif">
+<p>Before execution: A=C9h, R4=54h, C=1<br> After execution: A=74h, C=0</p>
+<p><b>Note:</b><br> The result is different (C9 - 54=75) because the carry flag is set (C=1) before the instruction starts execution.</p>
+<p><span class="red">SUBB A,#data</span> - Subtracts the immediate data from the accumulator with a borrow</p>
+<p><span style="background: #87cefa; border: 1px solid #DDD; padding-left: 5px; padding-right: 5px;"> <b>A</b>: accumulator<br> &nbsp;<b>Data</b>: constant in the range of 0-255 (0-FFh) </span></p>
+<p><b>Description:</b> Instruction subtracts the immediate data from the accumulator with a borrow. If the higher bit is subtracted from the lower bit then     the carry flag is set. The result is stored in the accumulator.</p>
+<p><b>Syntax</b>: SUBB A,#data;<br> <b>Bytes</b>: 2 (instruction code, data);<br> <b>STATUS register flags:</b> C, OV, AC;</p>
+<p><b>EXAMPLE:</b></p>
+<img title="SUBB A,#X" alt="SUBB A,#X" src="./Chapter 3 : The 8051 Instruction Set_files/102.gif">
+<p>Before execution: A=C9h, C=0<br> After execution: A=A7h, C=0</p>
+<p><span class="red">SUBB A,@Ri</span> - Subtracts the indirect RAM from the accumulator with a borrow</p>
+<p><span style="background: #87cefa; border: 1px solid #DDD; padding-left: 5px; padding-right: 5px;"> <b>Ri</b>: register R0 or R1<br> &nbsp;<b>A</b>: accumulator </span></p>
+<p><b>Description:</b> Instruction subtracts the indirectly addressed register of RAM from the accumulator with a borrow. If the higher bit is subtracted from the lower bit then     the carry flag is set. As it is indirect addressing, the register address is stored in the Ri     register (R0 or R1). The result is stored in the accumulator.</p>
+<p><b>Syntax</b>: SUBB A,@Ri;<br> <b>Byte</b>: 1 (instruction code);<br> <b>STATUS register flags:</b> C, OV, AC;</p>
+<p><b>EXAMPLE:</b></p>
+<img title="SUBB A,@Ri" alt="SUBB A,@Ri" src="./Chapter 3 : The 8051 Instruction Set_files/103.gif">
+<p>Register address: MIN=F4<br> Before execution: A=C9h, R1=F4h, MIN=04, C=0<br> After execution: A=C5h, C=0</p>
+<p><span class="red">XCH A,Rn</span> - Exchanges the Rn register with the accumulator</p>
+<p><span style="background: #87cefa; border: 1px solid #DDD; padding-left: 5px; padding-right: 5px;"> <b>Rn</b>: any R register (R0-R7)<br> &nbsp;<b>A</b>: accumulator </span></p>
+<p><b>Description:</b> Instruction causes the accumulator and Rn register to exchange data.     The content of the accumulator is moved to the Rn register and vice versa.</p>
+<p><b>Syntax</b>: XCH A,Rn;<br> <b>Byte</b>: 1 (instruction code);<br> <b>STATUS register flags:</b> No flags are affected;</p>
+<p><b>EXAMPLE:</b></p>
+<img title="XCH A,Rn" alt="XCH A,Rn" src="./Chapter 3 : The 8051 Instruction Set_files/104.gif">
+<p>Before execution: A=C6h, R3=29h<br> After execution: R3=C6h, A=29h</p>
+<p><span class="red">SWAP A</span> - Swaps nibbles within the accumulator</p>
+<p><span style="background: #87cefa; border: 1px solid #DDD; padding-left: 5px; padding-right: 5px;"> <b>A</b>: accumulator </span></p>
+<p><b>Description:</b> A nibble refers to a group of 4 bits within one     register (bit0-bit3 and bit4-bit7). This instruction interchanges high and low nibbles     of the accumulator.</p>
+<p><b>Syntax</b>: SWAP A;<br> <b>Byte</b>: 1 (instruction code);<br> <b>STATUS register flags:</b> No flags are affected;</p>
+<p><b>EXAMPLE:</b></p>
+<img title="SWAP A" alt="SWAP A" src="./Chapter 3 : The 8051 Instruction Set_files/105.gif">
+<p>Before execution: A=E1h (11100001)bin.<br> After execution: A=1Eh (00011110)bin.</p>
+<img title="Swap nibbles within accumulator" alt="Swap nibbles within accumulator" src="./Chapter 3 : The 8051 Instruction Set_files/106.gif">
+<p><span class="red">XCH A,@Ri</span> - Exchanges the indirect RAM with the accumulator</p>
+<p><span style="background: #87cefa; border: 1px solid #DDD; padding-left: 5px; padding-right: 5px;"> <b>Ri</b>: register R0 or R1<br> &nbsp;<b>A</b>: accumulator </span></p>
+<p><b>Description:</b> Instruction moves the contents of accumulator to the indirectly addressed register of RAM and vice versa. As it is indirect     addressing, the register address is stored in the register Ri (R0 or R1).</p>
+<p><b>Syntax</b>: XCH A,@Ri;<br> <b>Byte</b>: 1 (instruction code);<br> <b>STATUS register flags:</b> No flags are affected;</p>
+<p><b>EXAMPLE:</b></p>
+<img title="XCH A,@Ri" alt="XCH A,@Ri" src="./Chapter 3 : The 8051 Instruction Set_files/107.gif">
+<p>Register address: SUM=E3<br> Before execution: R0=E3, SUM=29h, A=98h<br> After execution: A=29h, SUM=98h</p>
+<p><span class="red">XCH A,direct</span> - Exchanges the direct byte with the accumulator</p>
+<p><span style="background: #87cefa; border: 1px solid #DDD; padding-left: 5px; padding-right: 5px;"> <b>Direct</b>: arbitrary register with address 0-255 (0-FFh)<br> &nbsp;<b>A</b>: accumulator </span></p>
+<p><b>Description:</b> Instruction moves the contents of the accumulator into the direct byte and vice versa.  	As it is direct addressing, the direct byte can be any SFRs or general-purpose register with     address 0-7Fh (0-127 dec.).</p>
+<p><b>Syntax</b>: XCH A,direct;<br> <b>Bytes</b>: 2 (instruction code, direct byte address);<br> <b>STATUS register flags:</b> No flags are affected;</p>
+<p><b>EXAMPLE:</b></p>
+<img title="XCH A,Rx" alt="XCH A,Rx" src="./Chapter 3 : The 8051 Instruction Set_files/108.gif">
+<p>Before execution: A=FFh, SUM=29h<br> After execution: SUM=FFh A=29h</p>
+<p><span class="red">XRL A,Rn</span> - Exclusive OR register to accumulator</p>
+<p><span style="background: #87cefa; border: 1px solid #DDD; padding-left: 5px; padding-right: 5px;"> <b>Rn</b>: any R register (R0-R7)<br> &nbsp;<b>A</b>: accumulator </span></p>
+<p><b>Description:</b> Instruction performs exclusive OR operation between the accumulator and the Rn register. The result is stored in the accumulator.</p>
+<p><b>Syntax</b>: XRL A,Rn;<br> <b>Byte</b>: 1 (instruction code);<br> <b>STATUS register flags:</b> No flags are affected;</p>
+<p><b>EXAMPLE:</b></p>
+<img title="XRL A,Rn" alt="XRL A,Rn" src="./Chapter 3 : The 8051 Instruction Set_files/109.gif">
+<p>Before execution: A= C3h (11000011 Bin.)<br> R3= 55h (01010101 Bin.)<br> After execution: A= 96h (10010110 Bin.)</p>
+<p><span class="red">XCHD A,@Ri</span> - Exchanges the low-order nibble indirect RAM with the accumulator</p>
+<p><span style="background: #87cefa; border: 1px solid #DDD; padding-left: 5px; padding-right: 5px;"> <b>Ri</b>: register R0 or R1<br> &nbsp;<b>A</b>: accumulator </span></p>
+<p><b>Description:</b> This instruction interchanges the low-order nibbles (bits 0-3) of the accumulator     with the low-order nibbles of the indirectly addressed register of RAM. High-order nibbles of the     accumulator and register are not affected. This instruction is mainly used when operating     with BCD values. As it is indirect addressing, the register address is stored in the     register Ri (R0 or R1).</p>
+<p><b>Syntax</b>: XCHD A,@Ri;<br> <b>Byte</b>: 1 (instruction code);<br> <b>STATUS register flags:</b> No flags are affected;</p>
+<p><b>EXAMPLE:</b></p>
+<img title="XCHD A,@Ri" alt="XCHD A,@Ri" src="./Chapter 3 : The 8051 Instruction Set_files/110.gif">
+<p>Register address: SUM=E3<br> Before execution: R0=E3 SUM=29h A=A8h,<br> After execution: A=A9h, SUM=28h</p>
+<img title="Exchange the content of low nibbles accumulator with indirectly addressed register Rx" alt="Exchange the content of low nibbles accumulator with indirectly addressed register Rx" src="./Chapter 3 : The 8051 Instruction Set_files/111.gif">
+<p><span class="red">XRL A,@Ri</span> - Exclusive OR indirect RAM to the accumulator</p>
+<p><span style="background: #87cefa; border: 1px solid #DDD; padding-left: 5px; padding-right: 5px;"> <b>Ri</b>: Register R0 or R1<br> &nbsp;<b>A</b>: accumulator </span></p>
+<p><b>Description:</b> Instruction performs exclusive OR operation between the accumulator     and the indirectly addressed register. As it is indirect addressing, the register address is stored in the     Ri register (R0 or R1). The result is stored in the accumulator.</p>
+<p><b>Syntax</b>: XRL A,@Ri;<br> <b>Byte</b>: 1 (instruction code);<br> <b>STATUS register flags:</b> No flags are affected;</p>
+<p><b>EXAMPLE:</b></p>
+<img title="XRL A,@Ri" alt="XRL A,@Ri" src="./Chapter 3 : The 8051 Instruction Set_files/112.gif">
+<p>Register address: TEMP=FAh, R1=FAh<br> Before execution: TEMP= C2h (11000010 Bin.)<br> A= 54h (01010100 Bin.)<br> After execution: A= 96h (10010110 Bin.)</p>
+<p><span class="red">XRL A,direct</span> - Exclusive OR direct byte to the accumulator</p>
+<p><span style="background: #87cefa; border: 1px solid #DDD; padding-left: 5px; padding-right: 5px;"> <b>Direct</b>: Arbitrary register with address 0-255 (0-FFh)<br> &nbsp;<b>A</b>: accumulator </span></p>
+<p><b>Description:</b> Instruction performs exclusive OR operation between the accumulator     and the direct byte. As it is direct addressing, the register can be any SFRs     or general-purpose register with address 0-7Fh (0-127 dec.). The result is stored in the accumulator.</p>
+<p><b>Syntax</b>: XRL A,direct;<br> <b>Bytes</b>: 2 (instruction code, direct byte address);<br> <b>STATUS register flags:</b> No flags are affected;</p>
+<p><b>EXAMPLE:</b></p>
+<img title="XRL A,Rx" alt="XRL A,Rx" src="./Chapter 3 : The 8051 Instruction Set_files/113.gif">
+<p>Before execution: A= C2h (11000010 Bin.)<br> LOG= 54h (01010100 Bin.)<br> After execution: A= 96h (10010110 Bin.)</p>
+<p><span class="red">XRL direct,A</span> - Exclusive OR accumulator to the direct byte</p>
+<p><span style="background: #87cefa; border: 1px solid #DDD; padding-left: 5px; padding-right: 5px;"> <b>Direct</b>: arbitrary register with address 0-255 (0-FFh)<br> &nbsp;<b>A</b>: accumulator </span></p>
+<p><b>Description:</b> Instruction performs exclusive OR operation between the direct byte and the accumulator.  	As it is direct addressing, the register can be any     SFRs or general-purpose register with address 0-7Fh (0-127 dec.). The result is stored in the register.</p>
+<p><b>Syntax</b>: XRL direct,A;<br> <b>Bytes</b>: 2 (instruction code, direct byte address);<br> <b>STATUS register flags:</b> No flags affected;</p>
+<p><b>EXAMPLE:</b></p>
+<img title="XRL Rx,A" alt="XRL Rx,A" src="./Chapter 3 : The 8051 Instruction Set_files/114.gif">
+<p>Before execution: TEMP= C2h (11000010 Bin.)<br> A= 54h (01010100 Bin.)<br> After execution: A= 96h (10010110 Bin.)</p>
+<p><span class="red">XRL A,#data</span> - Exclusive OR immediate data to the accumulator</p>
+<p><span style="background: #87cefa; border: 1px solid #DDD; padding-left: 5px; padding-right: 5px;"> <b>Data</b>: constant in the range of 0-255 (0-FFh)<br> &nbsp;<b>A</b>: accumulator </span></p>
+<p><b>Description:</b> Instruction performs exclusive OR operation between the accumulator     and the immediate data. The result is stored in the accumulator.</p>
+<p><b>Syntax</b>: XRL A,#data;<br> <b>Bytes</b>: 2 (instruction code, data);<br> <b>STATUS register flags:</b> No flags are affected;</p>
+<p><b>EXAMPLE:</b></p>
+<img title="XRL A,#X" alt="XRL A,#X" src="./Chapter 3 : The 8051 Instruction Set_files/115.gif">
+<p>Before execution: A= C2h (11000010 Bin.)<br> X= 11h (00010001 Bin.)<br> After execution: A= D3h (11010011 Bin.)</p>
+<p><span class="red">XRL direct,#data</span> - Exclusive OR immediate data to direct byte</p>
+<p><span style="background: #87cefa; border: 1px solid #DDD; padding-left: 5px; padding-right: 5px;"> <b>Direct</b>: arbitrary register with address 0-255 (0-FFh)<br> &nbsp;<b>Data</b>: constant in the range of 0-255 (0-FFh) </span></p>
+<p><b>Description:</b> Instruction performs exclusive OR operation between the immediate data and the direct byte.  	As it is direct addressing, the register can be any SFRs     or general-purpose register with address 0-7Fh (0-127 dec.). The result is stored in the register.</p>
+<p><b>Syntax</b>: XRL direct,#data;<br> <b>Bytes</b>: 3 (instruction code, direct byte address, data);<br> <b>STATUS register flags:</b> No flags affected;</p>
+<p><b>EXAMPLE:</b></p>
+<img title="XRL Rx,#X" alt="XRL Rx,#X" src="./Chapter 3 : The 8051 Instruction Set_files/116.gif">
+<p>Before execution: TEMP= C2h (11000010 Bin.)<br> X=12h (00010010 Bin.)<br> After execution: A= D0h (11010000 Bin.)</p>
+<div class="ocisti"><!-- /OCISTI FLOATING --></div>    <div class="separator"></div>
+    <p class="fright">
+        ← <a href="http://www.mikroe.com/eng/chapters/view/65/chapter-2-8051-microcontroller-architecture/">previous chapter</a> | 
+        <a href="http://www.mikroe.com/eng/products/view/267/architecture-and-programming-of-8051-mcu-s/">table of contents</a>        
+    | <a href="http://www.mikroe.com/eng/chapters/view/67/chapter-4-at89s8253-microcontroller/">next chapter</a> →
+        
+    </p>
+    <div class="separator"></div>
+</div>
+   <div id="sidebarCompiler">
+        
+         <div class="sidebar_product_holder">           
+          <div id="tools">            
+              <h2 style="background-color:#fff; color: #933;">Featured Development Tools</h2>
+              <div class="separator"></div>                     
+                             
+                  <div class="sidebar_product_thumb">
+                  <h3><a href="http://www.mikroe.com/eng/products/view/329/easy8051-v6-development-system/">Easy8051 v6 Development System</a></h3>
+                      <a href="http://www.mikroe.com/eng/products/view/329/easy8051-v6-development-system/"><img src="./Chapter 3 : The 8051 Instruction Set_files/easy8051v6_thumb.gif" title="Easy8051 v6 Development System" alt="Easy8051 v6 Development System"></a>              
+                      <p>The<b> Easy8051 v6</b> is compatible with 14-, 16-, 20-, 28-, 40-pin PLCC44 and PLCC32 MCUs. It comes with an AT89S8253. The board has a USB 2.0 programmer and many peripherals such as COG, port expander, MENU and 4x4 keypads etc.&nbsp; [<a href="http://www.mikroe.com/eng/products/view/329/easy8051-v6-development-system/">more info</a>]</p>
+                  </div>
+                             
+                  <div class="sidebar_product_thumb">
+                  <h3><a href="http://www.mikroe.com/eng/products/view/94/8051prog2/">8051prog2</a></h3>
+                      <a href="http://www.mikroe.com/eng/products/view/94/8051prog2/"><img src="./Chapter 3 : The 8051 Instruction Set_files/8051prog2_thumb.gif" title="8051prog2" alt="8051prog2"></a>              
+                      <p>The <b>8051prog2</b> is a USB 2.0 programmer used for programming 8051 microcontrollers from Atmel. Unlike programmers whose operation is based on bootloaders, this one provides the external programming of microcontrollers so that the entire memory is available. [<a href="http://www.mikroe.com/eng/products/view/94/8051prog2/">more info</a>]</p>
+                  </div>
+                         
+          </div>        
+         </div>
+       
+    
+        
+         <div class="sidebar_product_holder">           
+          <div id="sidebarcompilers">            
+              <h2 style="background-color:#fff; color: #933;">Featured Compilers</h2>
+              <div class="separator"></div>                     
+                             
+                  <div class="sidebar_product_thumb">
+                  <h3><a href="http://www.mikroe.com/eng/products/view/234/mikrobasic-pro-for-8051/">mikroBasic PRO for 8051</a></h3>
+                      <a href="http://www.mikroe.com/eng/products/view/234/mikrobasic-pro-for-8051/"><img src="./Chapter 3 : The 8051 Instruction Set_files/mikrobasic-pro-for-pic_150.gif" title="mikroBasic PRO for 8051" alt="mikroBasic PRO for 8051"></a>              
+                      <p>Compiler <b>mikroBasic PRO for 8051</b> provides easy-to-learn BASIC syntax, advanced compiler features, built-in routines and many practical examples that allow a quick start in programming 8051 MCUs. [<a href="http://www.mikroe.com/eng/products/view/234/mikrobasic-pro-for-8051/">more info</a>]</p>
+                  </div>
+                         
+          </div>        
+         </div>
+     
+    
+           
+   </div>        
+    <div class="separator"></div>               
+                
+    </div>
+	
+      <div id="footer">  
+        <div class="leftIndent10px">	  			
+			<ul>
+			    <li><b>Related Links:</b></li>                
+                <li><a href="http://www.mikroe.com/eng/products/index/">Products</a></li>
+                <li><a href="http://www.mikroe.com/eng/news/index/">News</a></li>
+                <li><a href="http://www.mikroe.com/forum/">Forums</a></li>
+                <li><a href="http://www.mikroe.com/eng/distributors/index/">Distributors</a></li>                
+                <li><a href="http://www.mikroe.com/eng/pages/display/about/">About MikroElektronika</a></li>
+				<!--<li><a href="#">Press</a></li>
+				<li><a href="#">Investor</a></li>
+				<li><a href="#">Contact Us</a></li>
+				<li><a href="#">Careers</a></li>-->
+				<li><a href="http://www.mikroe.com/eng/pages/display/terms/">Legal Information and Privacy Policy</a></li>
+                <li><a href="http://www.mikroe.com/eng/categories/view/46/product-archive/">Product Archive</a></li>                
+                <li><a href="http://www.mikroe.com/eng/visitor_contacts/index/">Contact Us</a></li>                
+			</ul>
+						  
+	        <p>Copyright © 1998–2011. MikroElektronika. All rights reserved. All trade and/or services marks mentioned are the property of their respective owners.</p>
+        </div>		
+      </div><!--/footer-->
+  </div> 
+<!--google analytics-->
+<script src="./Chapter 3 : The 8051 Instruction Set_files/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-2667377-1";
+urchinTracker();
+</script>    
+
+</body></html>

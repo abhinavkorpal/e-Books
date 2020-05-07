@@ -1,0 +1,672 @@
+/*
+Navigation STYLE SHEET FOR http://www.mikroe.com
+Created by Marko Jovanovic
+marko@mikroe.com
+
+ToC
+
+1. Dropdown Home Page Navigation
+2. Breadcrumbs
+3. Dropdown Download Navigation
+4. Dropdown Language Navigation
+
+Notes
+
+*/
+
+/* ---------- 1. Navigation ---------- */
+
+    #homemain{
+      width:990px;      
+      margin-left:5px;                  
+    }
+         
+    .homeh2{        
+        font-family: Arial;
+        font-size: 1.0em;
+        background: #dddddd; 
+        padding-left:10px;       
+        margin-bottom:7px;       
+    }          
+         
+    #homecontent{
+      width:100%;      
+      float:left;          
+      /*border:1px solid #ff0000;*/            
+    }
+    
+    
+    .homethumb{
+      width:232px;           
+      float:left;
+      /*border:1px solid #cccccc;*/      
+      margin-right:15px;      
+      
+      /*background: #ffffff; */
+      background:#ffffff url(../img/menu/products_background.gif) no-repeat top left;
+      /*width: 100%;*/
+    }
+                              
+    .homethumb h2{  
+        margin:0;
+        padding:0;      
+        font-size:0.9em;        
+        font-family: Arial, Helvetica, sans-serif;
+        color:#fff;
+        text-transform: uppercase;
+        /*text-align: center;*/
+        padding-left: 7px;
+        padding-top: 9px;
+    }
+    
+    .homethumb h2 a{        
+        color: #ffffff;
+    }    
+    
+    .homethumb p { 
+        font-size:0.7em;   
+        margin:0;     
+        margin-left: 5px;
+        margin-right: 5px;
+        margin-bottom: 5px;
+        width:96%;
+    }          
+        
+    .homethumb img { 
+        padding-top: 8px;        
+        padding-left: 5px;
+        padding-bottom: 5px;        
+        padding-right: 5px;        
+    }            
+    
+    .expcontainer{
+      width:699px;
+      float:left;     
+      border-right:1px dashed #cccccc;
+    }   
+        
+    .explore{
+      width:232px;            
+      float: left; 
+      /*border:1px solid #cccccc;*/           
+    }   
+                   
+    .explore h2 a{        
+        color:#933;
+    }      
+                  
+    .explore h2{        
+        font-family: Arial;
+        font-size:0.9em;
+        margin-left: 15px;
+        margin-top: 5px;
+    }    
+        
+    .explore ul {      
+        margin:0.5em 0;
+        padding-left:25px;
+        font:76%/140% "Lucida Grande", "Lucida Sans Unicode", Arial, Helvetica, sans-serif;
+        line-height:20px;
+        list-style: none;
+    }
+    
+    .explore p {                 
+        padding-left:25px;
+        padding-right:15px;
+        font-size:0.7em; 
+    }    
+      
+    .explore_archived{      
+      float:left;  
+      margin-right:10px;               
+    }       
+    
+    .explore_archived h2{        
+        color:#933;
+        font-family: Arial;
+        font-size:0.9em;
+        margin-left: 15px;
+        margin-bottom: 5px;        
+    }                  
+    
+    .homebox{
+       /*border:1px solid #cccccc;*/
+       border-top:0;
+       margin-bottom: 15px;       
+    }
+         
+    
+    #homeside{
+      width:290px;      
+      float:left;            
+      /*border:1px solid #cccccc;   */      
+      margin-bottom: 5px; 
+      margin-top:5px; 
+    }    
+    
+    #homeside h2{        
+        /*padding-left:5px;        */
+        font-size:0.9em;
+        font-family: Arial, Helvetica, sans-serif;
+        color:#933;        
+        /*background-color:#638a9e;*/
+        /*padding:0.3em 10px; */        
+    }    
+    
+    #homeside h2 a{        
+        color:#933;
+    }       
+    
+    #homeside p {        
+        /*float:left;*/
+        overflow:hidden; /* simple clearing */
+        font-size:0.7em;
+        /*padding-left:105px;*/
+        margin-right:5px;        
+    }  
+    
+    #homeside img {
+        float:left;
+        margin-left:5px;
+        margin-right:5px;
+        margin-top:7px;
+        
+    }          
+    
+    .partners {                
+        margin-left: 10px;                                                
+    }      
+    
+    .partners ul{        
+        padding: 0;
+    }
+    
+    .partners li {    
+        display: inline;
+        float: left;
+        padding: 0;
+        padding-left:10px;
+    }         
+    
+    .partners li p {
+       width:115px;
+        font-family: Verdana;
+        font-size: 0.5em;           
+        line-height: 1.2em;
+        text-align: justify;
+    }
+        
+/* ---------- 2. Breadcrumbs ---------- */	
+
+    #breadcrumbs {				
+        margin-left: 5px;	  						
+		/*margin-top: 3px;
+		margin-bottom: 3px;*/
+	}
+	
+	#breadcrumbs ul{		
+        padding: 0;
+	}
+	
+	#breadcrumbs li {	
+		display: inline;
+		background: url(../img/menu/arrow.gif) 0 50% no-repeat;
+		padding: 0 4px 0 8px;
+		font-family: Verdana;
+		font-size: 0.6em;		
+    }
+	
+	#breadcrumbs li a{
+		text-decoration: none;
+    }	
+	
+	#breadcrumbs li a:hover{
+		text-decoration: underline;
+    }	
+
+/* ---------- 3. Download Navigation ---------- */
+	   	    
+    .download_categories {                
+        margin-left:5px;
+        margin-right:5px;        
+        background-color: #ffffff;
+    }    
+    
+    .download_categories h2{        
+        color:#933;        
+        font-family: Arial;
+        font-size:0.9em;
+        margin-left: 15px;
+        margin-bottom: 5px;        
+    }  
+    
+    .download_categories ul {
+        overflow:hidden;
+        width:100%;        
+        list-style:none;
+        /*margin:0 0 1em 0;*/
+        margin-bottom: 5px;
+        margin-left: 15px;
+        padding:0;                
+    }
+    
+    .download_categories li {
+        display:block;        
+        float:left;
+        width:220px;
+        padding:0.5em 1.9em 0 0;
+        margin:0;        
+        font-family: Verdana;
+        font-size: 0.8em;
+    }               
+    
+    .download_categories li a {            
+        display: block;        
+        /*padding: 5px 5px 15px 0.5em;*/
+        padding-left: 5px;        
+        padding-right: 5px;        
+        padding-top: 5px;
+        padding-bottom: 5px;
+        color: blue;
+        text-decoration: none;                         
+        width: 100%; 
+        height: auto;         
+        /*min-height: 46px; */       
+        }
+        
+    .download_categories li a img{   
+        float:left;             
+        margin: 0;
+        margin-right: 5px;          
+        padding: 0; 
+        /*border: 1px solid #ccc;*/
+        }    
+                              
+    html>body .download_categories li a {
+        width: auto;
+        }
+
+    .download_categories li a:hover {
+        /*color: #fff;*/
+        background-color: #c8ffff;        
+        }     
+            
+    .download_navigation{            
+      padding-top: 5px;      
+      padding-bottom: 5px; 
+      /*margin-left:10px;        */
+    }    
+    
+    .download_navigation h2{
+        font-family: Arial;
+        font-size: 1.0em;           
+        color: #933;
+        padding-left:7px;        
+        margin-bottom:5px;        
+        background-color: #dddddd;                                           
+    }       
+    
+    .download_navigation h4{        
+        font-family: Arial;
+        background-color: #eeeeee; 
+        font-size:0.8em;        
+        margin-bottom: 5px;       
+        padding-left:7px;         
+    }      
+    
+    .download_navigation h3{        
+        color:#933;        
+        font-family: Arial;
+        font-size:0.8em;              
+        padding-bottom: 10px;          
+    }      
+    
+    .download_navigation ul {
+        overflow:hidden;
+        width:100%;        
+        list-style:none;
+        margin:0 0 1em 0;
+        margin-left: 15px;
+        padding:0;                
+    }
+    .download_navigation li {
+        display:block;        
+        float:left;
+        font-family: Verdana;
+        font-size:0.8em;
+        width:300px;        
+        padding-left:20px;
+        margin:0;        
+    }        
+    
+    .download_navigation li a {            
+        display: block;        
+        /*padding: 5px 5px 15px 0.5em;*/
+        padding-left: 5px;        
+        padding-right: 5px;        
+        padding-top: 5px;
+        padding-bottom: 5px;
+        color: blue;
+        text-decoration: none;                         
+        width: 100%; 
+        height: auto;         
+        /*min-height: 46px; */       
+        }
+        
+    html>body .download_navigation li a {
+        width: auto;
+        }
+
+    .download_navigation li a:hover {
+        /*color: #fff;*/
+        background-color: #c8ffff;        
+        }     
+                    
+   /* ---------- 4. Dropdown Language Navigation ---------- */    
+    
+    #lang_select {           
+        background: #fff;
+        float: right;   
+        padding-top:5px;     
+    }
+
+    #lang_select ul {
+        list-style: none;
+        margin: 0;
+        margin-right:10px;
+        padding: 0;
+        width: 100%;
+        float: left;
+    }
+
+    #lang_select a{        
+        font-family: Verdana;
+        font-size: 1.1em;
+                
+        display: block;
+        margin: 0;
+        padding: 2px 3px; 
+        
+        color: blue;
+        background: #fff;       
+        text-decoration: none; 
+    }
+
+    #lang_select a:hover {
+        color: blue;
+        background: #fff;
+        text-decoration: underline;
+    }
+
+    #lang_select li {position: relative;}
+
+    #lang_select ul ul {
+        position: absolute;
+        z-index: 500;
+    }
+
+    div#lang_select ul ul
+    {display: none;}
+
+    div#lang_select ul li:hover ul,
+    div#lang_select ul ul li:hover ul,
+    div#lang_select ul ul ul li:hover ul
+    {display: block;}
+    
+    /* -- Admin Panel User Menu -- */
+    
+/*    #usermenu {
+        float:left;
+        width: 12em;
+        border-right: 1px solid #000;
+        padding: 0;
+        margin-bottom: 1em;
+        font-family: Arial;        
+        background-color: #90bade;
+        color: #333;
+    }    
+    
+    #usermenu ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        border: none;
+    }
+        
+    #usermenu li {
+        border-bottom: 1px solid #90bade;
+        margin: 0;
+    }
+    
+    #usermenu li h2 {
+        display: block;
+        font-size: 12px;  
+        padding: 5px 5px 5px 0.5em;
+        border-left: 10px solid #1958b7;
+        border-right: 10px solid #508fc4;
+        background-color: #2175bc;
+        color: #fff;
+        text-decoration: none;
+        width: 100%;
+    }
+
+    html>body #usermenu li h2 {
+        width: auto;
+    }
+
+    #usermenu li h2:hover {
+        border-left: 10px solid #1c64d1;
+        border-right: 10px solid #5ba3e0;
+        background-color: #2586d7;
+        color: #fff;
+    }
+    
+    #usermenu ul ul {
+        display:none;
+        position:absolute;
+        left:75px;
+        top:5px;
+        border:#fff solid;
+        border-width:1px;
+        background-color:#999;
+    }    
+    
+    #usermenu ul li:hover ul {display:block;}
+    
+    #usermenu ul ul li {border:none; width:150px; float:left; display:inline;} 
+    
+    #usermenu ul ul li:hover {text-decoration:underline; border:none;}*/
+    
+    #usermenu {
+      float:left;
+      width:225px; 
+      font-size:12px;      
+    }
+    
+    #usermenu ul {margin:0px; padding:0px; background-color:#90bade;}
+
+    #usermenu ul li {
+        height:25px;
+        line-height:25px;
+        list-style:none;
+        padding-left:10px;
+
+        background-color: #b7ddf2; 
+        color:#555;
+        border-top:#fff solid;
+        border-bottom:#fff solid;
+        border-width:1px;
+        cursor:pointer;
+    }    
+    
+    #usermenu ul li h2{
+        font-size: 12px
+    }     
+    
+    #usermenu ul li:hover {background-color:#F90; position:relative;}
+    
+    #usermenu ul ul {
+        display:none;
+        position:absolute;
+        left:75px;
+        top:5px;
+        border:#fff solid;
+        border-width:1px;
+        background-color:#999;
+        color:#FFF; 
+    }    
+    
+    #usermenu ul li:hover ul {display:block; }
+    
+    #usermenu ul ul li {border:none; width:250px; float:left; display:inline;} 
+    
+    #usermenu ul ul li:hover {text-decoration:underline; border:none;}
+    
+    /* -- Dropdown list -- */
+    
+    ul.dropdown,
+    ul.dropdown li,
+    ul.dropdown ul {
+     list-style: none;
+     margin: 0;
+     padding: 0;
+    }
+
+    ul.dropdown {
+     position: relative;
+     z-index: 597;
+     float: left;
+    }
+
+    ul.dropdown li {
+     float: left;
+     line-height: 1.3em;
+     vertical-align: middle;
+     zoom: 1;
+    }
+
+    ul.dropdown li.hover,
+    ul.dropdown li:hover {
+     position: relative;
+     z-index: 599;
+     cursor: default;
+    }
+
+    ul.dropdown ul {
+     visibility: hidden;
+     position: absolute;
+     top: 100%;
+     left: 0;
+     z-index: 598;
+     width: 100%;
+    }
+
+    ul.dropdown ul li {
+     float: none;
+    }
+
+    ul.dropdown ul ul {
+     top: 1px;
+     left: 99%;
+    }
+
+    ul.dropdown li:hover > ul {
+     visibility: visible;
+    }    
+    
+    /* -- Dropdown list style -- */
+
+    ul.dropdown {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        width: 100%;
+        float: left;        
+
+        position:relative;
+        display:block;
+        background-color: #eee;
+        border-bottom:1px solid #ccc;
+        border-top:1px solid #ccc;                    
+        color: #444;
+        
+        font-family: Arial;    
+        text-decoration: none;
+        word-spacing: normal;
+        text-align: left;
+        letter-spacing: 0;
+        line-height: 0.9em;
+        font-size: 0.9em;          
+    }
+
+    ul.dropdown li {
+        float: left;    
+        display:block;
+        margin:0;
+        padding:0;    
+    }
+
+    ul.dropdown li a {        
+        display:block;
+        float:left;
+        color:#666;
+        text-decoration:none;    
+           
+        padding:4px 10px 3px 10px; 
+        border-right: 1px solid #ccc;
+    }
+      
+    ul.dropdown li a.first{    
+        display: block;
+        margin: 0 0.6em;        
+        line-height: 2.5em;        
+        text-decoration: none;
+        color: #000000;
+        background-color: #bec7d6;        
+        float: left;   
+    }
+      
+    ul.dropdown li a.here {
+        display: block;
+        padding: 0 0.6em;        
+        line-height: 2.5em;        
+        text-decoration: none;
+        color: #000000;        
+        float: left;
+    }  
+      
+    ul.dropdown li a:hover {    
+        background-color: #777;
+        color:#fff;        
+    }    
+    
+    /*ul.dropdown li.hover,
+    ul.dropdown li:hover {
+     background-color: #eee;
+     color: #000;
+    }
+
+    ul.dropdown a:link,
+    ul.dropdown a:visited    { color: #000; text-decoration: none; }
+    ul.dropdown a:hover        { color: #000; }
+    ul.dropdown a:active    { color: #ffa500; }*/
+
+
+    /* -- level mark -- */
+
+    ul.dropdown ul {
+     width: 150px;
+     margin-top: 1px;
+    }
+
+    ul.dropdown ul li a{
+     font-weight: normal;
+     width:200px;
+     
+     background-color: #eee;
+     border-bottom:1px solid #ddd;
+     /*border-top:1px solid #ccc;*/
+     color: #444;
+     
+     font-size: 0.8em;
+    }    
